@@ -1,0 +1,2040 @@
+{
+  "metadata": {
+    "source": "INEI–ENAHO: población con al menos una NBI por departamento, 2015–2025",
+    "url": "https://www.inei.gob.pe/media/MenuRecursivo/indices_tematicos/cd4_55.xlsx",
+    "source_file": "INEI_NBI_departamento.xlsx",
+    "source_sha256": "bcfee9154dc52cf9e42dc591f2662a44d0f9eb63f4005a2f87d4bc2963b4c55c",
+    "training_file": "inei_nbi_training.csv",
+    "training_sha256": "eeaeefc04639d1359083fa427100b5f4368ddd63a5a6cb0cbb509260e6d77dc3",
+    "rows": 286,
+    "territories": 26,
+    "years": [
+      2015,
+      2025
+    ],
+    "generated": false,
+    "imputed": false,
+    "excluded_source_rows": [
+      "titulo",
+      "unidad",
+      "vacios",
+      "total nacional",
+      "notas",
+      "fuente"
+    ],
+    "validation": {
+      "null_values": 0,
+      "duplicate_department_year": 0,
+      "expected_rows": 286,
+      "nbi_range": [
+        5.1148147268565145,
+        58.68795574500641
+      ]
+    },
+    "unit": "Porcentaje de poblacion con al menos una NBI"
+  },
+  "records": [
+    {
+      "department_id": "amazonas",
+      "department": "Amazonas",
+      "region": "Selva",
+      "year": 2015,
+      "nbi_percent": 37.17452088443548
+    },
+    {
+      "department_id": "amazonas",
+      "department": "Amazonas",
+      "region": "Selva",
+      "year": 2016,
+      "nbi_percent": 36.40444490993037
+    },
+    {
+      "department_id": "amazonas",
+      "department": "Amazonas",
+      "region": "Selva",
+      "year": 2017,
+      "nbi_percent": 35.34619146457989
+    },
+    {
+      "department_id": "amazonas",
+      "department": "Amazonas",
+      "region": "Selva",
+      "year": 2018,
+      "nbi_percent": 33.838405003795295
+    },
+    {
+      "department_id": "amazonas",
+      "department": "Amazonas",
+      "region": "Selva",
+      "year": 2019,
+      "nbi_percent": 30.172448510374494
+    },
+    {
+      "department_id": "amazonas",
+      "department": "Amazonas",
+      "region": "Selva",
+      "year": 2020,
+      "nbi_percent": 30.880364642436245
+    },
+    {
+      "department_id": "amazonas",
+      "department": "Amazonas",
+      "region": "Selva",
+      "year": 2021,
+      "nbi_percent": 27.922795005633937
+    },
+    {
+      "department_id": "amazonas",
+      "department": "Amazonas",
+      "region": "Selva",
+      "year": 2022,
+      "nbi_percent": 28.598152080604407
+    },
+    {
+      "department_id": "amazonas",
+      "department": "Amazonas",
+      "region": "Selva",
+      "year": 2023,
+      "nbi_percent": 25.811514457551866
+    },
+    {
+      "department_id": "amazonas",
+      "department": "Amazonas",
+      "region": "Selva",
+      "year": 2024,
+      "nbi_percent": 29.213367390410195
+    },
+    {
+      "department_id": "amazonas",
+      "department": "Amazonas",
+      "region": "Selva",
+      "year": 2025,
+      "nbi_percent": 25.128679572326522
+    },
+    {
+      "department_id": "ancash",
+      "department": "Áncash",
+      "region": "Sierra",
+      "year": 2015,
+      "nbi_percent": 18.20660925652124
+    },
+    {
+      "department_id": "ancash",
+      "department": "Áncash",
+      "region": "Sierra",
+      "year": 2016,
+      "nbi_percent": 15.678836631916027
+    },
+    {
+      "department_id": "ancash",
+      "department": "Áncash",
+      "region": "Sierra",
+      "year": 2017,
+      "nbi_percent": 14.934689637373305
+    },
+    {
+      "department_id": "ancash",
+      "department": "Áncash",
+      "region": "Sierra",
+      "year": 2018,
+      "nbi_percent": 18.156112534698412
+    },
+    {
+      "department_id": "ancash",
+      "department": "Áncash",
+      "region": "Sierra",
+      "year": 2019,
+      "nbi_percent": 17.2014035176195
+    },
+    {
+      "department_id": "ancash",
+      "department": "Áncash",
+      "region": "Sierra",
+      "year": 2020,
+      "nbi_percent": 20.217974503817445
+    },
+    {
+      "department_id": "ancash",
+      "department": "Áncash",
+      "region": "Sierra",
+      "year": 2021,
+      "nbi_percent": 17.5522798842874
+    },
+    {
+      "department_id": "ancash",
+      "department": "Áncash",
+      "region": "Sierra",
+      "year": 2022,
+      "nbi_percent": 18.623535978191597
+    },
+    {
+      "department_id": "ancash",
+      "department": "Áncash",
+      "region": "Sierra",
+      "year": 2023,
+      "nbi_percent": 18.798358491489125
+    },
+    {
+      "department_id": "ancash",
+      "department": "Áncash",
+      "region": "Sierra",
+      "year": 2024,
+      "nbi_percent": 16.866747529029098
+    },
+    {
+      "department_id": "ancash",
+      "department": "Áncash",
+      "region": "Sierra",
+      "year": 2025,
+      "nbi_percent": 16.82081020210474
+    },
+    {
+      "department_id": "apurimac",
+      "department": "Apurímac",
+      "region": "Sierra",
+      "year": 2015,
+      "nbi_percent": 13.870093569874143
+    },
+    {
+      "department_id": "apurimac",
+      "department": "Apurímac",
+      "region": "Sierra",
+      "year": 2016,
+      "nbi_percent": 18.021084016547874
+    },
+    {
+      "department_id": "apurimac",
+      "department": "Apurímac",
+      "region": "Sierra",
+      "year": 2017,
+      "nbi_percent": 15.52998699794863
+    },
+    {
+      "department_id": "apurimac",
+      "department": "Apurímac",
+      "region": "Sierra",
+      "year": 2018,
+      "nbi_percent": 11.683063196161678
+    },
+    {
+      "department_id": "apurimac",
+      "department": "Apurímac",
+      "region": "Sierra",
+      "year": 2019,
+      "nbi_percent": 11.348341993281853
+    },
+    {
+      "department_id": "apurimac",
+      "department": "Apurímac",
+      "region": "Sierra",
+      "year": 2020,
+      "nbi_percent": 13.92858111318356
+    },
+    {
+      "department_id": "apurimac",
+      "department": "Apurímac",
+      "region": "Sierra",
+      "year": 2021,
+      "nbi_percent": 10.737294574221817
+    },
+    {
+      "department_id": "apurimac",
+      "department": "Apurímac",
+      "region": "Sierra",
+      "year": 2022,
+      "nbi_percent": 9.32929124722331
+    },
+    {
+      "department_id": "apurimac",
+      "department": "Apurímac",
+      "region": "Sierra",
+      "year": 2023,
+      "nbi_percent": 9.347383115533708
+    },
+    {
+      "department_id": "apurimac",
+      "department": "Apurímac",
+      "region": "Sierra",
+      "year": 2024,
+      "nbi_percent": 7.754382977166198
+    },
+    {
+      "department_id": "apurimac",
+      "department": "Apurímac",
+      "region": "Sierra",
+      "year": 2025,
+      "nbi_percent": 8.715198004421222
+    },
+    {
+      "department_id": "arequipa",
+      "department": "Arequipa",
+      "region": "Costa",
+      "year": 2015,
+      "nbi_percent": 11.265999172455919
+    },
+    {
+      "department_id": "arequipa",
+      "department": "Arequipa",
+      "region": "Costa",
+      "year": 2016,
+      "nbi_percent": 11.11169286469449
+    },
+    {
+      "department_id": "arequipa",
+      "department": "Arequipa",
+      "region": "Costa",
+      "year": 2017,
+      "nbi_percent": 11.810912540674217
+    },
+    {
+      "department_id": "arequipa",
+      "department": "Arequipa",
+      "region": "Costa",
+      "year": 2018,
+      "nbi_percent": 10.069454856062135
+    },
+    {
+      "department_id": "arequipa",
+      "department": "Arequipa",
+      "region": "Costa",
+      "year": 2019,
+      "nbi_percent": 10.59292185586947
+    },
+    {
+      "department_id": "arequipa",
+      "department": "Arequipa",
+      "region": "Costa",
+      "year": 2020,
+      "nbi_percent": 10.531783950093212
+    },
+    {
+      "department_id": "arequipa",
+      "department": "Arequipa",
+      "region": "Costa",
+      "year": 2021,
+      "nbi_percent": 10.561614683860743
+    },
+    {
+      "department_id": "arequipa",
+      "department": "Arequipa",
+      "region": "Costa",
+      "year": 2022,
+      "nbi_percent": 9.690407265755134
+    },
+    {
+      "department_id": "arequipa",
+      "department": "Arequipa",
+      "region": "Costa",
+      "year": 2023,
+      "nbi_percent": 8.833488631647167
+    },
+    {
+      "department_id": "arequipa",
+      "department": "Arequipa",
+      "region": "Costa",
+      "year": 2024,
+      "nbi_percent": 8.626146106826939
+    },
+    {
+      "department_id": "arequipa",
+      "department": "Arequipa",
+      "region": "Costa",
+      "year": 2025,
+      "nbi_percent": 7.308475491154078
+    },
+    {
+      "department_id": "ayacucho",
+      "department": "Ayacucho",
+      "region": "Sierra",
+      "year": 2015,
+      "nbi_percent": 24.919105083486926
+    },
+    {
+      "department_id": "ayacucho",
+      "department": "Ayacucho",
+      "region": "Sierra",
+      "year": 2016,
+      "nbi_percent": 23.313391877186252
+    },
+    {
+      "department_id": "ayacucho",
+      "department": "Ayacucho",
+      "region": "Sierra",
+      "year": 2017,
+      "nbi_percent": 20.298292455507358
+    },
+    {
+      "department_id": "ayacucho",
+      "department": "Ayacucho",
+      "region": "Sierra",
+      "year": 2018,
+      "nbi_percent": 18.437974990630682
+    },
+    {
+      "department_id": "ayacucho",
+      "department": "Ayacucho",
+      "region": "Sierra",
+      "year": 2019,
+      "nbi_percent": 19.184791443420607
+    },
+    {
+      "department_id": "ayacucho",
+      "department": "Ayacucho",
+      "region": "Sierra",
+      "year": 2020,
+      "nbi_percent": 17.787938069322227
+    },
+    {
+      "department_id": "ayacucho",
+      "department": "Ayacucho",
+      "region": "Sierra",
+      "year": 2021,
+      "nbi_percent": 16.89153786489288
+    },
+    {
+      "department_id": "ayacucho",
+      "department": "Ayacucho",
+      "region": "Sierra",
+      "year": 2022,
+      "nbi_percent": 18.520461473974816
+    },
+    {
+      "department_id": "ayacucho",
+      "department": "Ayacucho",
+      "region": "Sierra",
+      "year": 2023,
+      "nbi_percent": 15.873314588937376
+    },
+    {
+      "department_id": "ayacucho",
+      "department": "Ayacucho",
+      "region": "Sierra",
+      "year": 2024,
+      "nbi_percent": 16.61908425971373
+    },
+    {
+      "department_id": "ayacucho",
+      "department": "Ayacucho",
+      "region": "Sierra",
+      "year": 2025,
+      "nbi_percent": 16.718153555400196
+    },
+    {
+      "department_id": "cajamarca",
+      "department": "Cajamarca",
+      "region": "Sierra",
+      "year": 2015,
+      "nbi_percent": 25.005599551091205
+    },
+    {
+      "department_id": "cajamarca",
+      "department": "Cajamarca",
+      "region": "Sierra",
+      "year": 2016,
+      "nbi_percent": 23.857906982381536
+    },
+    {
+      "department_id": "cajamarca",
+      "department": "Cajamarca",
+      "region": "Sierra",
+      "year": 2017,
+      "nbi_percent": 21.39412475235687
+    },
+    {
+      "department_id": "cajamarca",
+      "department": "Cajamarca",
+      "region": "Sierra",
+      "year": 2018,
+      "nbi_percent": 20.21397205667299
+    },
+    {
+      "department_id": "cajamarca",
+      "department": "Cajamarca",
+      "region": "Sierra",
+      "year": 2019,
+      "nbi_percent": 17.195311104060472
+    },
+    {
+      "department_id": "cajamarca",
+      "department": "Cajamarca",
+      "region": "Sierra",
+      "year": 2020,
+      "nbi_percent": 18.269439005438414
+    },
+    {
+      "department_id": "cajamarca",
+      "department": "Cajamarca",
+      "region": "Sierra",
+      "year": 2021,
+      "nbi_percent": 14.114804223136334
+    },
+    {
+      "department_id": "cajamarca",
+      "department": "Cajamarca",
+      "region": "Sierra",
+      "year": 2022,
+      "nbi_percent": 17.587733826109375
+    },
+    {
+      "department_id": "cajamarca",
+      "department": "Cajamarca",
+      "region": "Sierra",
+      "year": 2023,
+      "nbi_percent": 16.188659934766232
+    },
+    {
+      "department_id": "cajamarca",
+      "department": "Cajamarca",
+      "region": "Sierra",
+      "year": 2024,
+      "nbi_percent": 14.696809903212117
+    },
+    {
+      "department_id": "cajamarca",
+      "department": "Cajamarca",
+      "region": "Sierra",
+      "year": 2025,
+      "nbi_percent": 16.974324215761268
+    },
+    {
+      "department_id": "callao",
+      "department": "Prov. Const. del Callao",
+      "region": "Costa",
+      "year": 2015,
+      "nbi_percent": 8.845537633549982
+    },
+    {
+      "department_id": "callao",
+      "department": "Prov. Const. del Callao",
+      "region": "Costa",
+      "year": 2016,
+      "nbi_percent": 6.976406673927424
+    },
+    {
+      "department_id": "callao",
+      "department": "Prov. Const. del Callao",
+      "region": "Costa",
+      "year": 2017,
+      "nbi_percent": 9.592245527538568
+    },
+    {
+      "department_id": "callao",
+      "department": "Prov. Const. del Callao",
+      "region": "Costa",
+      "year": 2018,
+      "nbi_percent": 5.764596348726136
+    },
+    {
+      "department_id": "callao",
+      "department": "Prov. Const. del Callao",
+      "region": "Costa",
+      "year": 2019,
+      "nbi_percent": 5.1148147268565145
+    },
+    {
+      "department_id": "callao",
+      "department": "Prov. Const. del Callao",
+      "region": "Costa",
+      "year": 2020,
+      "nbi_percent": 8.625810424434361
+    },
+    {
+      "department_id": "callao",
+      "department": "Prov. Const. del Callao",
+      "region": "Costa",
+      "year": 2021,
+      "nbi_percent": 8.894770571704354
+    },
+    {
+      "department_id": "callao",
+      "department": "Prov. Const. del Callao",
+      "region": "Costa",
+      "year": 2022,
+      "nbi_percent": 7.326683695707701
+    },
+    {
+      "department_id": "callao",
+      "department": "Prov. Const. del Callao",
+      "region": "Costa",
+      "year": 2023,
+      "nbi_percent": 9.210995862343923
+    },
+    {
+      "department_id": "callao",
+      "department": "Prov. Const. del Callao",
+      "region": "Costa",
+      "year": 2024,
+      "nbi_percent": 8.572580025926573
+    },
+    {
+      "department_id": "callao",
+      "department": "Prov. Const. del Callao",
+      "region": "Costa",
+      "year": 2025,
+      "nbi_percent": 11.22019425501571
+    },
+    {
+      "department_id": "cusco",
+      "department": "Cusco",
+      "region": "Sierra",
+      "year": 2015,
+      "nbi_percent": 15.869851412251839
+    },
+    {
+      "department_id": "cusco",
+      "department": "Cusco",
+      "region": "Sierra",
+      "year": 2016,
+      "nbi_percent": 18.063634749722066
+    },
+    {
+      "department_id": "cusco",
+      "department": "Cusco",
+      "region": "Sierra",
+      "year": 2017,
+      "nbi_percent": 18.64004732287269
+    },
+    {
+      "department_id": "cusco",
+      "department": "Cusco",
+      "region": "Sierra",
+      "year": 2018,
+      "nbi_percent": 15.238221267882242
+    },
+    {
+      "department_id": "cusco",
+      "department": "Cusco",
+      "region": "Sierra",
+      "year": 2019,
+      "nbi_percent": 13.546762877841028
+    },
+    {
+      "department_id": "cusco",
+      "department": "Cusco",
+      "region": "Sierra",
+      "year": 2020,
+      "nbi_percent": 17.639906372878038
+    },
+    {
+      "department_id": "cusco",
+      "department": "Cusco",
+      "region": "Sierra",
+      "year": 2021,
+      "nbi_percent": 12.258623095481378
+    },
+    {
+      "department_id": "cusco",
+      "department": "Cusco",
+      "region": "Sierra",
+      "year": 2022,
+      "nbi_percent": 11.729071532100736
+    },
+    {
+      "department_id": "cusco",
+      "department": "Cusco",
+      "region": "Sierra",
+      "year": 2023,
+      "nbi_percent": 11.165087372538363
+    },
+    {
+      "department_id": "cusco",
+      "department": "Cusco",
+      "region": "Sierra",
+      "year": 2024,
+      "nbi_percent": 11.43366342933903
+    },
+    {
+      "department_id": "cusco",
+      "department": "Cusco",
+      "region": "Sierra",
+      "year": 2025,
+      "nbi_percent": 10.96153755082483
+    },
+    {
+      "department_id": "huancavelica",
+      "department": "Huancavelica",
+      "region": "Sierra",
+      "year": 2015,
+      "nbi_percent": 27.486826663444553
+    },
+    {
+      "department_id": "huancavelica",
+      "department": "Huancavelica",
+      "region": "Sierra",
+      "year": 2016,
+      "nbi_percent": 24.78956968637628
+    },
+    {
+      "department_id": "huancavelica",
+      "department": "Huancavelica",
+      "region": "Sierra",
+      "year": 2017,
+      "nbi_percent": 20.910724659291695
+    },
+    {
+      "department_id": "huancavelica",
+      "department": "Huancavelica",
+      "region": "Sierra",
+      "year": 2018,
+      "nbi_percent": 21.52379614827208
+    },
+    {
+      "department_id": "huancavelica",
+      "department": "Huancavelica",
+      "region": "Sierra",
+      "year": 2019,
+      "nbi_percent": 20.539754286553855
+    },
+    {
+      "department_id": "huancavelica",
+      "department": "Huancavelica",
+      "region": "Sierra",
+      "year": 2020,
+      "nbi_percent": 15.096726080590303
+    },
+    {
+      "department_id": "huancavelica",
+      "department": "Huancavelica",
+      "region": "Sierra",
+      "year": 2021,
+      "nbi_percent": 12.90181789176709
+    },
+    {
+      "department_id": "huancavelica",
+      "department": "Huancavelica",
+      "region": "Sierra",
+      "year": 2022,
+      "nbi_percent": 20.152313690895937
+    },
+    {
+      "department_id": "huancavelica",
+      "department": "Huancavelica",
+      "region": "Sierra",
+      "year": 2023,
+      "nbi_percent": 20.15972809647381
+    },
+    {
+      "department_id": "huancavelica",
+      "department": "Huancavelica",
+      "region": "Sierra",
+      "year": 2024,
+      "nbi_percent": 19.226636097383157
+    },
+    {
+      "department_id": "huancavelica",
+      "department": "Huancavelica",
+      "region": "Sierra",
+      "year": 2025,
+      "nbi_percent": 15.083402493052123
+    },
+    {
+      "department_id": "huanuco",
+      "department": "Huánuco",
+      "region": "Sierra",
+      "year": 2015,
+      "nbi_percent": 26.139987330128413
+    },
+    {
+      "department_id": "huanuco",
+      "department": "Huánuco",
+      "region": "Sierra",
+      "year": 2016,
+      "nbi_percent": 27.379914006217874
+    },
+    {
+      "department_id": "huanuco",
+      "department": "Huánuco",
+      "region": "Sierra",
+      "year": 2017,
+      "nbi_percent": 29.12135295601424
+    },
+    {
+      "department_id": "huanuco",
+      "department": "Huánuco",
+      "region": "Sierra",
+      "year": 2018,
+      "nbi_percent": 23.670195391274486
+    },
+    {
+      "department_id": "huanuco",
+      "department": "Huánuco",
+      "region": "Sierra",
+      "year": 2019,
+      "nbi_percent": 23.84042724413349
+    },
+    {
+      "department_id": "huanuco",
+      "department": "Huánuco",
+      "region": "Sierra",
+      "year": 2020,
+      "nbi_percent": 25.086046777846082
+    },
+    {
+      "department_id": "huanuco",
+      "department": "Huánuco",
+      "region": "Sierra",
+      "year": 2021,
+      "nbi_percent": 23.670184868888466
+    },
+    {
+      "department_id": "huanuco",
+      "department": "Huánuco",
+      "region": "Sierra",
+      "year": 2022,
+      "nbi_percent": 28.380017209586647
+    },
+    {
+      "department_id": "huanuco",
+      "department": "Huánuco",
+      "region": "Sierra",
+      "year": 2023,
+      "nbi_percent": 25.788195056338285
+    },
+    {
+      "department_id": "huanuco",
+      "department": "Huánuco",
+      "region": "Sierra",
+      "year": 2024,
+      "nbi_percent": 23.70143788086819
+    },
+    {
+      "department_id": "huanuco",
+      "department": "Huánuco",
+      "region": "Sierra",
+      "year": 2025,
+      "nbi_percent": 26.050161167533147
+    },
+    {
+      "department_id": "ica",
+      "department": "Ica",
+      "region": "Costa",
+      "year": 2015,
+      "nbi_percent": 12.450628152939178
+    },
+    {
+      "department_id": "ica",
+      "department": "Ica",
+      "region": "Costa",
+      "year": 2016,
+      "nbi_percent": 11.770926970886675
+    },
+    {
+      "department_id": "ica",
+      "department": "Ica",
+      "region": "Costa",
+      "year": 2017,
+      "nbi_percent": 8.805168615874326
+    },
+    {
+      "department_id": "ica",
+      "department": "Ica",
+      "region": "Costa",
+      "year": 2018,
+      "nbi_percent": 8.243784295854148
+    },
+    {
+      "department_id": "ica",
+      "department": "Ica",
+      "region": "Costa",
+      "year": 2019,
+      "nbi_percent": 8.963453347836547
+    },
+    {
+      "department_id": "ica",
+      "department": "Ica",
+      "region": "Costa",
+      "year": 2020,
+      "nbi_percent": 9.717555532730872
+    },
+    {
+      "department_id": "ica",
+      "department": "Ica",
+      "region": "Costa",
+      "year": 2021,
+      "nbi_percent": 11.856788392147346
+    },
+    {
+      "department_id": "ica",
+      "department": "Ica",
+      "region": "Costa",
+      "year": 2022,
+      "nbi_percent": 12.017288393613041
+    },
+    {
+      "department_id": "ica",
+      "department": "Ica",
+      "region": "Costa",
+      "year": 2023,
+      "nbi_percent": 11.796465277663506
+    },
+    {
+      "department_id": "ica",
+      "department": "Ica",
+      "region": "Costa",
+      "year": 2024,
+      "nbi_percent": 9.152228413762002
+    },
+    {
+      "department_id": "ica",
+      "department": "Ica",
+      "region": "Costa",
+      "year": 2025,
+      "nbi_percent": 10.43762860445187
+    },
+    {
+      "department_id": "junin",
+      "department": "Junín",
+      "region": "Sierra",
+      "year": 2015,
+      "nbi_percent": 26.869945105282888
+    },
+    {
+      "department_id": "junin",
+      "department": "Junín",
+      "region": "Sierra",
+      "year": 2016,
+      "nbi_percent": 26.834038546790477
+    },
+    {
+      "department_id": "junin",
+      "department": "Junín",
+      "region": "Sierra",
+      "year": 2017,
+      "nbi_percent": 25.967967459849902
+    },
+    {
+      "department_id": "junin",
+      "department": "Junín",
+      "region": "Sierra",
+      "year": 2018,
+      "nbi_percent": 24.086827404776535
+    },
+    {
+      "department_id": "junin",
+      "department": "Junín",
+      "region": "Sierra",
+      "year": 2019,
+      "nbi_percent": 23.103275860209436
+    },
+    {
+      "department_id": "junin",
+      "department": "Junín",
+      "region": "Sierra",
+      "year": 2020,
+      "nbi_percent": 22.711101862059156
+    },
+    {
+      "department_id": "junin",
+      "department": "Junín",
+      "region": "Sierra",
+      "year": 2021,
+      "nbi_percent": 23.475783746078996
+    },
+    {
+      "department_id": "junin",
+      "department": "Junín",
+      "region": "Sierra",
+      "year": 2022,
+      "nbi_percent": 22.046037886154693
+    },
+    {
+      "department_id": "junin",
+      "department": "Junín",
+      "region": "Sierra",
+      "year": 2023,
+      "nbi_percent": 20.399732560157812
+    },
+    {
+      "department_id": "junin",
+      "department": "Junín",
+      "region": "Sierra",
+      "year": 2024,
+      "nbi_percent": 20.743243307977828
+    },
+    {
+      "department_id": "junin",
+      "department": "Junín",
+      "region": "Sierra",
+      "year": 2025,
+      "nbi_percent": 18.315388044849268
+    },
+    {
+      "department_id": "la_libertad",
+      "department": "La Libertad",
+      "region": "Costa",
+      "year": 2015,
+      "nbi_percent": 14.74392442984299
+    },
+    {
+      "department_id": "la_libertad",
+      "department": "La Libertad",
+      "region": "Costa",
+      "year": 2016,
+      "nbi_percent": 13.592349876377934
+    },
+    {
+      "department_id": "la_libertad",
+      "department": "La Libertad",
+      "region": "Costa",
+      "year": 2017,
+      "nbi_percent": 13.417657052968739
+    },
+    {
+      "department_id": "la_libertad",
+      "department": "La Libertad",
+      "region": "Costa",
+      "year": 2018,
+      "nbi_percent": 10.647599385793999
+    },
+    {
+      "department_id": "la_libertad",
+      "department": "La Libertad",
+      "region": "Costa",
+      "year": 2019,
+      "nbi_percent": 10.143241834688267
+    },
+    {
+      "department_id": "la_libertad",
+      "department": "La Libertad",
+      "region": "Costa",
+      "year": 2020,
+      "nbi_percent": 10.558814083303147
+    },
+    {
+      "department_id": "la_libertad",
+      "department": "La Libertad",
+      "region": "Costa",
+      "year": 2021,
+      "nbi_percent": 10.726535757261425
+    },
+    {
+      "department_id": "la_libertad",
+      "department": "La Libertad",
+      "region": "Costa",
+      "year": 2022,
+      "nbi_percent": 11.024428087768836
+    },
+    {
+      "department_id": "la_libertad",
+      "department": "La Libertad",
+      "region": "Costa",
+      "year": 2023,
+      "nbi_percent": 11.845125077763575
+    },
+    {
+      "department_id": "la_libertad",
+      "department": "La Libertad",
+      "region": "Costa",
+      "year": 2024,
+      "nbi_percent": 11.163848555803646
+    },
+    {
+      "department_id": "la_libertad",
+      "department": "La Libertad",
+      "region": "Costa",
+      "year": 2025,
+      "nbi_percent": 10.48308953594716
+    },
+    {
+      "department_id": "lambayeque",
+      "department": "Lambayeque",
+      "region": "Costa",
+      "year": 2015,
+      "nbi_percent": 15.394816157161705
+    },
+    {
+      "department_id": "lambayeque",
+      "department": "Lambayeque",
+      "region": "Costa",
+      "year": 2016,
+      "nbi_percent": 11.395678167913685
+    },
+    {
+      "department_id": "lambayeque",
+      "department": "Lambayeque",
+      "region": "Costa",
+      "year": 2017,
+      "nbi_percent": 14.213962374985744
+    },
+    {
+      "department_id": "lambayeque",
+      "department": "Lambayeque",
+      "region": "Costa",
+      "year": 2018,
+      "nbi_percent": 9.812053104276794
+    },
+    {
+      "department_id": "lambayeque",
+      "department": "Lambayeque",
+      "region": "Costa",
+      "year": 2019,
+      "nbi_percent": 10.23768025737717
+    },
+    {
+      "department_id": "lambayeque",
+      "department": "Lambayeque",
+      "region": "Costa",
+      "year": 2020,
+      "nbi_percent": 10.213321706839313
+    },
+    {
+      "department_id": "lambayeque",
+      "department": "Lambayeque",
+      "region": "Costa",
+      "year": 2021,
+      "nbi_percent": 10.247079747630128
+    },
+    {
+      "department_id": "lambayeque",
+      "department": "Lambayeque",
+      "region": "Costa",
+      "year": 2022,
+      "nbi_percent": 7.751332813730751
+    },
+    {
+      "department_id": "lambayeque",
+      "department": "Lambayeque",
+      "region": "Costa",
+      "year": 2023,
+      "nbi_percent": 7.983463640806702
+    },
+    {
+      "department_id": "lambayeque",
+      "department": "Lambayeque",
+      "region": "Costa",
+      "year": 2024,
+      "nbi_percent": 6.786432627514741
+    },
+    {
+      "department_id": "lambayeque",
+      "department": "Lambayeque",
+      "region": "Costa",
+      "year": 2025,
+      "nbi_percent": 8.733843908347563
+    },
+    {
+      "department_id": "lima",
+      "department": "Lima Metropolitana",
+      "region": "Costa",
+      "year": 2015,
+      "nbi_percent": 8.365901778018088
+    },
+    {
+      "department_id": "lima",
+      "department": "Lima Metropolitana",
+      "region": "Costa",
+      "year": 2016,
+      "nbi_percent": 8.385271133274554
+    },
+    {
+      "department_id": "lima",
+      "department": "Lima Metropolitana",
+      "region": "Costa",
+      "year": 2017,
+      "nbi_percent": 8.069874389097803
+    },
+    {
+      "department_id": "lima",
+      "department": "Lima Metropolitana",
+      "region": "Costa",
+      "year": 2018,
+      "nbi_percent": 8.7161395429579
+    },
+    {
+      "department_id": "lima",
+      "department": "Lima Metropolitana",
+      "region": "Costa",
+      "year": 2019,
+      "nbi_percent": 8.805107847893964
+    },
+    {
+      "department_id": "lima",
+      "department": "Lima Metropolitana",
+      "region": "Costa",
+      "year": 2020,
+      "nbi_percent": 9.075966731816827
+    },
+    {
+      "department_id": "lima",
+      "department": "Lima Metropolitana",
+      "region": "Costa",
+      "year": 2021,
+      "nbi_percent": 9.316645930426477
+    },
+    {
+      "department_id": "lima",
+      "department": "Lima Metropolitana",
+      "region": "Costa",
+      "year": 2022,
+      "nbi_percent": 9.219520159751148
+    },
+    {
+      "department_id": "lima",
+      "department": "Lima Metropolitana",
+      "region": "Costa",
+      "year": 2023,
+      "nbi_percent": 9.473300779883862
+    },
+    {
+      "department_id": "lima",
+      "department": "Lima Metropolitana",
+      "region": "Costa",
+      "year": 2024,
+      "nbi_percent": 9.631438888071619
+    },
+    {
+      "department_id": "lima",
+      "department": "Lima Metropolitana",
+      "region": "Costa",
+      "year": 2025,
+      "nbi_percent": 9.170657721527743
+    },
+    {
+      "department_id": "lima_region",
+      "department": "Región Lima",
+      "region": "Costa",
+      "year": 2015,
+      "nbi_percent": 17.623465882065165
+    },
+    {
+      "department_id": "lima_region",
+      "department": "Región Lima",
+      "region": "Costa",
+      "year": 2016,
+      "nbi_percent": 17.581902051382432
+    },
+    {
+      "department_id": "lima_region",
+      "department": "Región Lima",
+      "region": "Costa",
+      "year": 2017,
+      "nbi_percent": 19.316154049165224
+    },
+    {
+      "department_id": "lima_region",
+      "department": "Región Lima",
+      "region": "Costa",
+      "year": 2018,
+      "nbi_percent": 15.445318980347725
+    },
+    {
+      "department_id": "lima_region",
+      "department": "Región Lima",
+      "region": "Costa",
+      "year": 2019,
+      "nbi_percent": 15.499140511814515
+    },
+    {
+      "department_id": "lima_region",
+      "department": "Región Lima",
+      "region": "Costa",
+      "year": 2020,
+      "nbi_percent": 13.351943068722434
+    },
+    {
+      "department_id": "lima_region",
+      "department": "Región Lima",
+      "region": "Costa",
+      "year": 2021,
+      "nbi_percent": 17.377669927024346
+    },
+    {
+      "department_id": "lima_region",
+      "department": "Región Lima",
+      "region": "Costa",
+      "year": 2022,
+      "nbi_percent": 14.229580022611033
+    },
+    {
+      "department_id": "lima_region",
+      "department": "Región Lima",
+      "region": "Costa",
+      "year": 2023,
+      "nbi_percent": 14.255743611315744
+    },
+    {
+      "department_id": "lima_region",
+      "department": "Región Lima",
+      "region": "Costa",
+      "year": 2024,
+      "nbi_percent": 15.670778604209978
+    },
+    {
+      "department_id": "lima_region",
+      "department": "Región Lima",
+      "region": "Costa",
+      "year": 2025,
+      "nbi_percent": 13.963843192483727
+    },
+    {
+      "department_id": "loreto",
+      "department": "Loreto",
+      "region": "Selva",
+      "year": 2015,
+      "nbi_percent": 58.68795574500641
+    },
+    {
+      "department_id": "loreto",
+      "department": "Loreto",
+      "region": "Selva",
+      "year": 2016,
+      "nbi_percent": 57.52171577929064
+    },
+    {
+      "department_id": "loreto",
+      "department": "Loreto",
+      "region": "Selva",
+      "year": 2017,
+      "nbi_percent": 55.62417784957838
+    },
+    {
+      "department_id": "loreto",
+      "department": "Loreto",
+      "region": "Selva",
+      "year": 2018,
+      "nbi_percent": 53.24508130583093
+    },
+    {
+      "department_id": "loreto",
+      "department": "Loreto",
+      "region": "Selva",
+      "year": 2019,
+      "nbi_percent": 52.425630527402205
+    },
+    {
+      "department_id": "loreto",
+      "department": "Loreto",
+      "region": "Selva",
+      "year": 2020,
+      "nbi_percent": 50.66200309890107
+    },
+    {
+      "department_id": "loreto",
+      "department": "Loreto",
+      "region": "Selva",
+      "year": 2021,
+      "nbi_percent": 56.244651634491355
+    },
+    {
+      "department_id": "loreto",
+      "department": "Loreto",
+      "region": "Selva",
+      "year": 2022,
+      "nbi_percent": 52.51180226025835
+    },
+    {
+      "department_id": "loreto",
+      "department": "Loreto",
+      "region": "Selva",
+      "year": 2023,
+      "nbi_percent": 54.70117042020499
+    },
+    {
+      "department_id": "loreto",
+      "department": "Loreto",
+      "region": "Selva",
+      "year": 2024,
+      "nbi_percent": 55.89930224575412
+    },
+    {
+      "department_id": "loreto",
+      "department": "Loreto",
+      "region": "Selva",
+      "year": 2025,
+      "nbi_percent": 53.19830972422713
+    },
+    {
+      "department_id": "madre_de_dios",
+      "department": "Madre de Dios",
+      "region": "Selva",
+      "year": 2015,
+      "nbi_percent": 30.630909631709354
+    },
+    {
+      "department_id": "madre_de_dios",
+      "department": "Madre de Dios",
+      "region": "Selva",
+      "year": 2016,
+      "nbi_percent": 29.120517543227898
+    },
+    {
+      "department_id": "madre_de_dios",
+      "department": "Madre de Dios",
+      "region": "Selva",
+      "year": 2017,
+      "nbi_percent": 22.840103296346612
+    },
+    {
+      "department_id": "madre_de_dios",
+      "department": "Madre de Dios",
+      "region": "Selva",
+      "year": 2018,
+      "nbi_percent": 25.433681240454852
+    },
+    {
+      "department_id": "madre_de_dios",
+      "department": "Madre de Dios",
+      "region": "Selva",
+      "year": 2019,
+      "nbi_percent": 23.215076197710744
+    },
+    {
+      "department_id": "madre_de_dios",
+      "department": "Madre de Dios",
+      "region": "Selva",
+      "year": 2020,
+      "nbi_percent": 24.95339134143992
+    },
+    {
+      "department_id": "madre_de_dios",
+      "department": "Madre de Dios",
+      "region": "Selva",
+      "year": 2021,
+      "nbi_percent": 21.079132535129247
+    },
+    {
+      "department_id": "madre_de_dios",
+      "department": "Madre de Dios",
+      "region": "Selva",
+      "year": 2022,
+      "nbi_percent": 27.24652683764471
+    },
+    {
+      "department_id": "madre_de_dios",
+      "department": "Madre de Dios",
+      "region": "Selva",
+      "year": 2023,
+      "nbi_percent": 29.146743887774484
+    },
+    {
+      "department_id": "madre_de_dios",
+      "department": "Madre de Dios",
+      "region": "Selva",
+      "year": 2024,
+      "nbi_percent": 27.271180022226705
+    },
+    {
+      "department_id": "madre_de_dios",
+      "department": "Madre de Dios",
+      "region": "Selva",
+      "year": 2025,
+      "nbi_percent": 26.18457284634793
+    },
+    {
+      "department_id": "moquegua",
+      "department": "Moquegua",
+      "region": "Costa",
+      "year": 2015,
+      "nbi_percent": 10.585029158832217
+    },
+    {
+      "department_id": "moquegua",
+      "department": "Moquegua",
+      "region": "Costa",
+      "year": 2016,
+      "nbi_percent": 14.142882609584008
+    },
+    {
+      "department_id": "moquegua",
+      "department": "Moquegua",
+      "region": "Costa",
+      "year": 2017,
+      "nbi_percent": 11.634177617048078
+    },
+    {
+      "department_id": "moquegua",
+      "department": "Moquegua",
+      "region": "Costa",
+      "year": 2018,
+      "nbi_percent": 11.37831830091004
+    },
+    {
+      "department_id": "moquegua",
+      "department": "Moquegua",
+      "region": "Costa",
+      "year": 2019,
+      "nbi_percent": 10.96519941879308
+    },
+    {
+      "department_id": "moquegua",
+      "department": "Moquegua",
+      "region": "Costa",
+      "year": 2020,
+      "nbi_percent": 11.875433374560606
+    },
+    {
+      "department_id": "moquegua",
+      "department": "Moquegua",
+      "region": "Costa",
+      "year": 2021,
+      "nbi_percent": 10.188184223046798
+    },
+    {
+      "department_id": "moquegua",
+      "department": "Moquegua",
+      "region": "Costa",
+      "year": 2022,
+      "nbi_percent": 8.872850243092495
+    },
+    {
+      "department_id": "moquegua",
+      "department": "Moquegua",
+      "region": "Costa",
+      "year": 2023,
+      "nbi_percent": 10.998217079887537
+    },
+    {
+      "department_id": "moquegua",
+      "department": "Moquegua",
+      "region": "Costa",
+      "year": 2024,
+      "nbi_percent": 11.243799020498614
+    },
+    {
+      "department_id": "moquegua",
+      "department": "Moquegua",
+      "region": "Costa",
+      "year": 2025,
+      "nbi_percent": 11.784540992611628
+    },
+    {
+      "department_id": "pasco",
+      "department": "Pasco",
+      "region": "Sierra",
+      "year": 2015,
+      "nbi_percent": 44.19217639752027
+    },
+    {
+      "department_id": "pasco",
+      "department": "Pasco",
+      "region": "Sierra",
+      "year": 2016,
+      "nbi_percent": 38.5147831765446
+    },
+    {
+      "department_id": "pasco",
+      "department": "Pasco",
+      "region": "Sierra",
+      "year": 2017,
+      "nbi_percent": 32.6622237586766
+    },
+    {
+      "department_id": "pasco",
+      "department": "Pasco",
+      "region": "Sierra",
+      "year": 2018,
+      "nbi_percent": 33.4127010355504
+    },
+    {
+      "department_id": "pasco",
+      "department": "Pasco",
+      "region": "Sierra",
+      "year": 2019,
+      "nbi_percent": 29.896691812665964
+    },
+    {
+      "department_id": "pasco",
+      "department": "Pasco",
+      "region": "Sierra",
+      "year": 2020,
+      "nbi_percent": 24.878889945096656
+    },
+    {
+      "department_id": "pasco",
+      "department": "Pasco",
+      "region": "Sierra",
+      "year": 2021,
+      "nbi_percent": 21.903778049264766
+    },
+    {
+      "department_id": "pasco",
+      "department": "Pasco",
+      "region": "Sierra",
+      "year": 2022,
+      "nbi_percent": 23.8113131763863
+    },
+    {
+      "department_id": "pasco",
+      "department": "Pasco",
+      "region": "Sierra",
+      "year": 2023,
+      "nbi_percent": 25.97383045045915
+    },
+    {
+      "department_id": "pasco",
+      "department": "Pasco",
+      "region": "Sierra",
+      "year": 2024,
+      "nbi_percent": 24.6472618632752
+    },
+    {
+      "department_id": "pasco",
+      "department": "Pasco",
+      "region": "Sierra",
+      "year": 2025,
+      "nbi_percent": 22.7131999696446
+    },
+    {
+      "department_id": "piura",
+      "department": "Piura",
+      "region": "Costa",
+      "year": 2015,
+      "nbi_percent": 25.53090350721091
+    },
+    {
+      "department_id": "piura",
+      "department": "Piura",
+      "region": "Costa",
+      "year": 2016,
+      "nbi_percent": 26.643838004045193
+    },
+    {
+      "department_id": "piura",
+      "department": "Piura",
+      "region": "Costa",
+      "year": 2017,
+      "nbi_percent": 26.97314831051433
+    },
+    {
+      "department_id": "piura",
+      "department": "Piura",
+      "region": "Costa",
+      "year": 2018,
+      "nbi_percent": 24.57737719180355
+    },
+    {
+      "department_id": "piura",
+      "department": "Piura",
+      "region": "Costa",
+      "year": 2019,
+      "nbi_percent": 22.313125989785103
+    },
+    {
+      "department_id": "piura",
+      "department": "Piura",
+      "region": "Costa",
+      "year": 2020,
+      "nbi_percent": 24.141161429311403
+    },
+    {
+      "department_id": "piura",
+      "department": "Piura",
+      "region": "Costa",
+      "year": 2021,
+      "nbi_percent": 22.606252816663773
+    },
+    {
+      "department_id": "piura",
+      "department": "Piura",
+      "region": "Costa",
+      "year": 2022,
+      "nbi_percent": 21.262519405763346
+    },
+    {
+      "department_id": "piura",
+      "department": "Piura",
+      "region": "Costa",
+      "year": 2023,
+      "nbi_percent": 21.610073131823153
+    },
+    {
+      "department_id": "piura",
+      "department": "Piura",
+      "region": "Costa",
+      "year": 2024,
+      "nbi_percent": 22.048053404829602
+    },
+    {
+      "department_id": "piura",
+      "department": "Piura",
+      "region": "Costa",
+      "year": 2025,
+      "nbi_percent": 22.3062121576939
+    },
+    {
+      "department_id": "puno",
+      "department": "Puno",
+      "region": "Sierra",
+      "year": 2015,
+      "nbi_percent": 30.238143975627914
+    },
+    {
+      "department_id": "puno",
+      "department": "Puno",
+      "region": "Sierra",
+      "year": 2016,
+      "nbi_percent": 26.664152034847454
+    },
+    {
+      "department_id": "puno",
+      "department": "Puno",
+      "region": "Sierra",
+      "year": 2017,
+      "nbi_percent": 24.189345698173252
+    },
+    {
+      "department_id": "puno",
+      "department": "Puno",
+      "region": "Sierra",
+      "year": 2018,
+      "nbi_percent": 19.95581854452639
+    },
+    {
+      "department_id": "puno",
+      "department": "Puno",
+      "region": "Sierra",
+      "year": 2019,
+      "nbi_percent": 20.866659580720448
+    },
+    {
+      "department_id": "puno",
+      "department": "Puno",
+      "region": "Sierra",
+      "year": 2020,
+      "nbi_percent": 21.03158821425009
+    },
+    {
+      "department_id": "puno",
+      "department": "Puno",
+      "region": "Sierra",
+      "year": 2021,
+      "nbi_percent": 20.509168516425213
+    },
+    {
+      "department_id": "puno",
+      "department": "Puno",
+      "region": "Sierra",
+      "year": 2022,
+      "nbi_percent": 18.589287302576214
+    },
+    {
+      "department_id": "puno",
+      "department": "Puno",
+      "region": "Sierra",
+      "year": 2023,
+      "nbi_percent": 19.751655890001288
+    },
+    {
+      "department_id": "puno",
+      "department": "Puno",
+      "region": "Sierra",
+      "year": 2024,
+      "nbi_percent": 20.919171394195498
+    },
+    {
+      "department_id": "puno",
+      "department": "Puno",
+      "region": "Sierra",
+      "year": 2025,
+      "nbi_percent": 18.10124500353136
+    },
+    {
+      "department_id": "san_martin",
+      "department": "San Martín",
+      "region": "Selva",
+      "year": 2015,
+      "nbi_percent": 41.66273170372063
+    },
+    {
+      "department_id": "san_martin",
+      "department": "San Martín",
+      "region": "Selva",
+      "year": 2016,
+      "nbi_percent": 38.282901164658604
+    },
+    {
+      "department_id": "san_martin",
+      "department": "San Martín",
+      "region": "Selva",
+      "year": 2017,
+      "nbi_percent": 34.15692713678165
+    },
+    {
+      "department_id": "san_martin",
+      "department": "San Martín",
+      "region": "Selva",
+      "year": 2018,
+      "nbi_percent": 32.84088928215628
+    },
+    {
+      "department_id": "san_martin",
+      "department": "San Martín",
+      "region": "Selva",
+      "year": 2019,
+      "nbi_percent": 29.05462862299556
+    },
+    {
+      "department_id": "san_martin",
+      "department": "San Martín",
+      "region": "Selva",
+      "year": 2020,
+      "nbi_percent": 34.74894430107292
+    },
+    {
+      "department_id": "san_martin",
+      "department": "San Martín",
+      "region": "Selva",
+      "year": 2021,
+      "nbi_percent": 30.93878226758869
+    },
+    {
+      "department_id": "san_martin",
+      "department": "San Martín",
+      "region": "Selva",
+      "year": 2022,
+      "nbi_percent": 32.752080264197986
+    },
+    {
+      "department_id": "san_martin",
+      "department": "San Martín",
+      "region": "Selva",
+      "year": 2023,
+      "nbi_percent": 30.103188400365166
+    },
+    {
+      "department_id": "san_martin",
+      "department": "San Martín",
+      "region": "Selva",
+      "year": 2024,
+      "nbi_percent": 31.4254664829976
+    },
+    {
+      "department_id": "san_martin",
+      "department": "San Martín",
+      "region": "Selva",
+      "year": 2025,
+      "nbi_percent": 30.214160836590786
+    },
+    {
+      "department_id": "tacna",
+      "department": "Tacna",
+      "region": "Costa",
+      "year": 2015,
+      "nbi_percent": 10.568115514458238
+    },
+    {
+      "department_id": "tacna",
+      "department": "Tacna",
+      "region": "Costa",
+      "year": 2016,
+      "nbi_percent": 9.839045182654871
+    },
+    {
+      "department_id": "tacna",
+      "department": "Tacna",
+      "region": "Costa",
+      "year": 2017,
+      "nbi_percent": 8.780642174986328
+    },
+    {
+      "department_id": "tacna",
+      "department": "Tacna",
+      "region": "Costa",
+      "year": 2018,
+      "nbi_percent": 9.318470813823325
+    },
+    {
+      "department_id": "tacna",
+      "department": "Tacna",
+      "region": "Costa",
+      "year": 2019,
+      "nbi_percent": 7.481578600094438
+    },
+    {
+      "department_id": "tacna",
+      "department": "Tacna",
+      "region": "Costa",
+      "year": 2020,
+      "nbi_percent": 8.996965449195912
+    },
+    {
+      "department_id": "tacna",
+      "department": "Tacna",
+      "region": "Costa",
+      "year": 2021,
+      "nbi_percent": 5.993161964140722
+    },
+    {
+      "department_id": "tacna",
+      "department": "Tacna",
+      "region": "Costa",
+      "year": 2022,
+      "nbi_percent": 7.0148809964791905
+    },
+    {
+      "department_id": "tacna",
+      "department": "Tacna",
+      "region": "Costa",
+      "year": 2023,
+      "nbi_percent": 10.284770197539284
+    },
+    {
+      "department_id": "tacna",
+      "department": "Tacna",
+      "region": "Costa",
+      "year": 2024,
+      "nbi_percent": 9.915656585909833
+    },
+    {
+      "department_id": "tacna",
+      "department": "Tacna",
+      "region": "Costa",
+      "year": 2025,
+      "nbi_percent": 9.921533936464126
+    },
+    {
+      "department_id": "tumbes",
+      "department": "Tumbes",
+      "region": "Costa",
+      "year": 2015,
+      "nbi_percent": 26.847570597403685
+    },
+    {
+      "department_id": "tumbes",
+      "department": "Tumbes",
+      "region": "Costa",
+      "year": 2016,
+      "nbi_percent": 28.567347808534755
+    },
+    {
+      "department_id": "tumbes",
+      "department": "Tumbes",
+      "region": "Costa",
+      "year": 2017,
+      "nbi_percent": 25.5897416847377
+    },
+    {
+      "department_id": "tumbes",
+      "department": "Tumbes",
+      "region": "Costa",
+      "year": 2018,
+      "nbi_percent": 26.238246252614733
+    },
+    {
+      "department_id": "tumbes",
+      "department": "Tumbes",
+      "region": "Costa",
+      "year": 2019,
+      "nbi_percent": 20.73924013979414
+    },
+    {
+      "department_id": "tumbes",
+      "department": "Tumbes",
+      "region": "Costa",
+      "year": 2020,
+      "nbi_percent": 25.670810606056428
+    },
+    {
+      "department_id": "tumbes",
+      "department": "Tumbes",
+      "region": "Costa",
+      "year": 2021,
+      "nbi_percent": 21.18200784447358
+    },
+    {
+      "department_id": "tumbes",
+      "department": "Tumbes",
+      "region": "Costa",
+      "year": 2022,
+      "nbi_percent": 21.54560785517112
+    },
+    {
+      "department_id": "tumbes",
+      "department": "Tumbes",
+      "region": "Costa",
+      "year": 2023,
+      "nbi_percent": 20.263348301895306
+    },
+    {
+      "department_id": "tumbes",
+      "department": "Tumbes",
+      "region": "Costa",
+      "year": 2024,
+      "nbi_percent": 20.190495629692954
+    },
+    {
+      "department_id": "tumbes",
+      "department": "Tumbes",
+      "region": "Costa",
+      "year": 2025,
+      "nbi_percent": 22.583978665160114
+    },
+    {
+      "department_id": "ucayali",
+      "department": "Ucayali",
+      "region": "Selva",
+      "year": 2015,
+      "nbi_percent": 47.39553456600071
+    },
+    {
+      "department_id": "ucayali",
+      "department": "Ucayali",
+      "region": "Selva",
+      "year": 2016,
+      "nbi_percent": 45.191490109898595
+    },
+    {
+      "department_id": "ucayali",
+      "department": "Ucayali",
+      "region": "Selva",
+      "year": 2017,
+      "nbi_percent": 42.29384794833474
+    },
+    {
+      "department_id": "ucayali",
+      "department": "Ucayali",
+      "region": "Selva",
+      "year": 2018,
+      "nbi_percent": 40.55262546561378
+    },
+    {
+      "department_id": "ucayali",
+      "department": "Ucayali",
+      "region": "Selva",
+      "year": 2019,
+      "nbi_percent": 43.44754261988696
+    },
+    {
+      "department_id": "ucayali",
+      "department": "Ucayali",
+      "region": "Selva",
+      "year": 2020,
+      "nbi_percent": 39.39825714874035
+    },
+    {
+      "department_id": "ucayali",
+      "department": "Ucayali",
+      "region": "Selva",
+      "year": 2021,
+      "nbi_percent": 42.896851029032916
+    },
+    {
+      "department_id": "ucayali",
+      "department": "Ucayali",
+      "region": "Selva",
+      "year": 2022,
+      "nbi_percent": 42.85725098930793
+    },
+    {
+      "department_id": "ucayali",
+      "department": "Ucayali",
+      "region": "Selva",
+      "year": 2023,
+      "nbi_percent": 42.96592531803996
+    },
+    {
+      "department_id": "ucayali",
+      "department": "Ucayali",
+      "region": "Selva",
+      "year": 2024,
+      "nbi_percent": 39.31686730355706
+    },
+    {
+      "department_id": "ucayali",
+      "department": "Ucayali",
+      "region": "Selva",
+      "year": 2025,
+      "nbi_percent": 39.41011818680205
+    }
+  ]
+}

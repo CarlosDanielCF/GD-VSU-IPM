@@ -1,0 +1,6 @@
+{
+  "name": "Gemelo Digital Urbano - Vulnerabilidad Socioeconómica (GD-VSU)",
+  "description": "Sistema de Gemelo Digital Urbano basado en Modelado de Agentes (ABM) y Ciencia de Datos Espaciales para la predicción y mitigación del Índice de Pobreza Multidimensional (IPM) en ciudades latinoamericanas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

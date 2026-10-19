@@ -1,0 +1,11 @@
+streamlit>=1.57,<2
+pandas>=3.0,<4
+openpyxl>=3.1,<4
+numpy>=2.4,<3
+scikit-learn>=1.9,<2
+plotly>=6.7,<7
+requests>=2.34,<3
+python-dotenv>=1.2,<2
+langchain>=1.4,<2
+langgraph>=1.2,<2
+langchain-google-genai>=4.4,<5

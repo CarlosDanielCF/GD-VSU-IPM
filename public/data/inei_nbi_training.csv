@@ -1,0 +1,287 @@
+﻿department_id,department,region,year,nbi_percent
+amazonas,Amazonas,Selva,2015,37.17452088443548
+amazonas,Amazonas,Selva,2016,36.40444490993037
+amazonas,Amazonas,Selva,2017,35.34619146457989
+amazonas,Amazonas,Selva,2018,33.838405003795295
+amazonas,Amazonas,Selva,2019,30.172448510374494
+amazonas,Amazonas,Selva,2020,30.880364642436245
+amazonas,Amazonas,Selva,2021,27.922795005633937
+amazonas,Amazonas,Selva,2022,28.598152080604407
+amazonas,Amazonas,Selva,2023,25.811514457551866
+amazonas,Amazonas,Selva,2024,29.213367390410195
+amazonas,Amazonas,Selva,2025,25.128679572326522
+ancash,Áncash,Sierra,2015,18.20660925652124
+ancash,Áncash,Sierra,2016,15.678836631916027
+ancash,Áncash,Sierra,2017,14.934689637373305
+ancash,Áncash,Sierra,2018,18.156112534698412
+ancash,Áncash,Sierra,2019,17.2014035176195
+ancash,Áncash,Sierra,2020,20.217974503817445
+ancash,Áncash,Sierra,2021,17.5522798842874
+ancash,Áncash,Sierra,2022,18.623535978191597
+ancash,Áncash,Sierra,2023,18.798358491489125
+ancash,Áncash,Sierra,2024,16.866747529029098
+ancash,Áncash,Sierra,2025,16.82081020210474
+apurimac,Apurímac,Sierra,2015,13.870093569874143
+apurimac,Apurímac,Sierra,2016,18.021084016547874
+apurimac,Apurímac,Sierra,2017,15.52998699794863
+apurimac,Apurímac,Sierra,2018,11.683063196161678
+apurimac,Apurímac,Sierra,2019,11.348341993281853
+apurimac,Apurímac,Sierra,2020,13.92858111318356
+apurimac,Apurímac,Sierra,2021,10.737294574221817
+apurimac,Apurímac,Sierra,2022,9.32929124722331
+apurimac,Apurímac,Sierra,2023,9.347383115533708
+apurimac,Apurímac,Sierra,2024,7.754382977166198
+apurimac,Apurímac,Sierra,2025,8.715198004421222
+arequipa,Arequipa,Costa,2015,11.265999172455919
+arequipa,Arequipa,Costa,2016,11.11169286469449
+arequipa,Arequipa,Costa,2017,11.810912540674217
+arequipa,Arequipa,Costa,2018,10.069454856062135
+arequipa,Arequipa,Costa,2019,10.59292185586947
+arequipa,Arequipa,Costa,2020,10.531783950093212
+arequipa,Arequipa,Costa,2021,10.561614683860743
+arequipa,Arequipa,Costa,2022,9.690407265755134
+arequipa,Arequipa,Costa,2023,8.833488631647167
+arequipa,Arequipa,Costa,2024,8.626146106826939
+arequipa,Arequipa,Costa,2025,7.308475491154078
+ayacucho,Ayacucho,Sierra,2015,24.919105083486926
+ayacucho,Ayacucho,Sierra,2016,23.313391877186252
+ayacucho,Ayacucho,Sierra,2017,20.298292455507358
+ayacucho,Ayacucho,Sierra,2018,18.437974990630682
+ayacucho,Ayacucho,Sierra,2019,19.184791443420607
+ayacucho,Ayacucho,Sierra,2020,17.787938069322227
+ayacucho,Ayacucho,Sierra,2021,16.89153786489288
+ayacucho,Ayacucho,Sierra,2022,18.520461473974816
+ayacucho,Ayacucho,Sierra,2023,15.873314588937376
+ayacucho,Ayacucho,Sierra,2024,16.61908425971373
+ayacucho,Ayacucho,Sierra,2025,16.718153555400196
+cajamarca,Cajamarca,Sierra,2015,25.005599551091205
+cajamarca,Cajamarca,Sierra,2016,23.857906982381536
+cajamarca,Cajamarca,Sierra,2017,21.39412475235687
+cajamarca,Cajamarca,Sierra,2018,20.21397205667299
+cajamarca,Cajamarca,Sierra,2019,17.195311104060472
+cajamarca,Cajamarca,Sierra,2020,18.269439005438414
+cajamarca,Cajamarca,Sierra,2021,14.114804223136334
+cajamarca,Cajamarca,Sierra,2022,17.587733826109375
+cajamarca,Cajamarca,Sierra,2023,16.188659934766232
+cajamarca,Cajamarca,Sierra,2024,14.696809903212117
+cajamarca,Cajamarca,Sierra,2025,16.974324215761268
+callao,Prov. Const. del Callao,Costa,2015,8.845537633549982
+callao,Prov. Const. del Callao,Costa,2016,6.976406673927424
+callao,Prov. Const. del Callao,Costa,2017,9.592245527538568
+callao,Prov. Const. del Callao,Costa,2018,5.764596348726136
+callao,Prov. Const. del Callao,Costa,2019,5.1148147268565145
+callao,Prov. Const. del Callao,Costa,2020,8.625810424434361
+callao,Prov. Const. del Callao,Costa,2021,8.894770571704354
+callao,Prov. Const. del Callao,Costa,2022,7.326683695707701
+callao,Prov. Const. del Callao,Costa,2023,9.210995862343923
+callao,Prov. Const. del Callao,Costa,2024,8.572580025926573
+callao,Prov. Const. del Callao,Costa,2025,11.22019425501571
+cusco,Cusco,Sierra,2015,15.869851412251839
+cusco,Cusco,Sierra,2016,18.063634749722066
+cusco,Cusco,Sierra,2017,18.64004732287269
+cusco,Cusco,Sierra,2018,15.238221267882242
+cusco,Cusco,Sierra,2019,13.546762877841028
+cusco,Cusco,Sierra,2020,17.639906372878038
+cusco,Cusco,Sierra,2021,12.258623095481378
+cusco,Cusco,Sierra,2022,11.729071532100736
+cusco,Cusco,Sierra,2023,11.165087372538363
+cusco,Cusco,Sierra,2024,11.43366342933903
+cusco,Cusco,Sierra,2025,10.96153755082483
+huancavelica,Huancavelica,Sierra,2015,27.486826663444553
+huancavelica,Huancavelica,Sierra,2016,24.78956968637628
+huancavelica,Huancavelica,Sierra,2017,20.910724659291695
+huancavelica,Huancavelica,Sierra,2018,21.52379614827208
+huancavelica,Huancavelica,Sierra,2019,20.539754286553855
+huancavelica,Huancavelica,Sierra,2020,15.096726080590303
+huancavelica,Huancavelica,Sierra,2021,12.90181789176709
+huancavelica,Huancavelica,Sierra,2022,20.152313690895937
+huancavelica,Huancavelica,Sierra,2023,20.15972809647381
+huancavelica,Huancavelica,Sierra,2024,19.226636097383157
+huancavelica,Huancavelica,Sierra,2025,15.083402493052123
+huanuco,Huánuco,Sierra,2015,26.139987330128413
+huanuco,Huánuco,Sierra,2016,27.379914006217874
+huanuco,Huánuco,Sierra,2017,29.12135295601424
+huanuco,Huánuco,Sierra,2018,23.670195391274486
+huanuco,Huánuco,Sierra,2019,23.84042724413349
+huanuco,Huánuco,Sierra,2020,25.086046777846082
+huanuco,Huánuco,Sierra,2021,23.670184868888466
+huanuco,Huánuco,Sierra,2022,28.380017209586647
+huanuco,Huánuco,Sierra,2023,25.788195056338285
+huanuco,Huánuco,Sierra,2024,23.70143788086819
+huanuco,Huánuco,Sierra,2025,26.050161167533147
+ica,Ica,Costa,2015,12.450628152939178
+ica,Ica,Costa,2016,11.770926970886675
+ica,Ica,Costa,2017,8.805168615874326
+ica,Ica,Costa,2018,8.243784295854148
+ica,Ica,Costa,2019,8.963453347836547
+ica,Ica,Costa,2020,9.717555532730872
+ica,Ica,Costa,2021,11.856788392147346
+ica,Ica,Costa,2022,12.017288393613041
+ica,Ica,Costa,2023,11.796465277663506
+ica,Ica,Costa,2024,9.152228413762002
+ica,Ica,Costa,2025,10.43762860445187
+junin,Junín,Sierra,2015,26.869945105282888
+junin,Junín,Sierra,2016,26.834038546790477
+junin,Junín,Sierra,2017,25.967967459849902
+junin,Junín,Sierra,2018,24.086827404776535
+junin,Junín,Sierra,2019,23.103275860209436
+junin,Junín,Sierra,2020,22.711101862059156
+junin,Junín,Sierra,2021,23.475783746078996
+junin,Junín,Sierra,2022,22.046037886154693
+junin,Junín,Sierra,2023,20.399732560157812
+junin,Junín,Sierra,2024,20.743243307977828
+junin,Junín,Sierra,2025,18.315388044849268
+la_libertad,La Libertad,Costa,2015,14.74392442984299
+la_libertad,La Libertad,Costa,2016,13.592349876377934
+la_libertad,La Libertad,Costa,2017,13.417657052968739
+la_libertad,La Libertad,Costa,2018,10.647599385793999
+la_libertad,La Libertad,Costa,2019,10.143241834688267
+la_libertad,La Libertad,Costa,2020,10.558814083303147
+la_libertad,La Libertad,Costa,2021,10.726535757261425
+la_libertad,La Libertad,Costa,2022,11.024428087768836
+la_libertad,La Libertad,Costa,2023,11.845125077763575
+la_libertad,La Libertad,Costa,2024,11.163848555803646
+la_libertad,La Libertad,Costa,2025,10.48308953594716
+lambayeque,Lambayeque,Costa,2015,15.394816157161705
+lambayeque,Lambayeque,Costa,2016,11.395678167913685
+lambayeque,Lambayeque,Costa,2017,14.213962374985744
+lambayeque,Lambayeque,Costa,2018,9.812053104276794
+lambayeque,Lambayeque,Costa,2019,10.23768025737717
+lambayeque,Lambayeque,Costa,2020,10.213321706839313
+lambayeque,Lambayeque,Costa,2021,10.247079747630128
+lambayeque,Lambayeque,Costa,2022,7.751332813730751
+lambayeque,Lambayeque,Costa,2023,7.983463640806702
+lambayeque,Lambayeque,Costa,2024,6.786432627514741
+lambayeque,Lambayeque,Costa,2025,8.733843908347563
+lima,Lima Metropolitana,Costa,2015,8.365901778018088
+lima,Lima Metropolitana,Costa,2016,8.385271133274554
+lima,Lima Metropolitana,Costa,2017,8.069874389097803
+lima,Lima Metropolitana,Costa,2018,8.7161395429579
+lima,Lima Metropolitana,Costa,2019,8.805107847893964
+lima,Lima Metropolitana,Costa,2020,9.075966731816827
+lima,Lima Metropolitana,Costa,2021,9.316645930426477
+lima,Lima Metropolitana,Costa,2022,9.219520159751148
+lima,Lima Metropolitana,Costa,2023,9.473300779883862
+lima,Lima Metropolitana,Costa,2024,9.631438888071619
+lima,Lima Metropolitana,Costa,2025,9.170657721527743
+lima_region,Región Lima,Costa,2015,17.623465882065165
+lima_region,Región Lima,Costa,2016,17.581902051382432
+lima_region,Región Lima,Costa,2017,19.316154049165224
+lima_region,Región Lima,Costa,2018,15.445318980347725
+lima_region,Región Lima,Costa,2019,15.499140511814515
+lima_region,Región Lima,Costa,2020,13.351943068722434
+lima_region,Región Lima,Costa,2021,17.377669927024346
+lima_region,Región Lima,Costa,2022,14.229580022611033
+lima_region,Región Lima,Costa,2023,14.255743611315744
+lima_region,Región Lima,Costa,2024,15.670778604209978
+lima_region,Región Lima,Costa,2025,13.963843192483727
+loreto,Loreto,Selva,2015,58.68795574500641
+loreto,Loreto,Selva,2016,57.52171577929064
+loreto,Loreto,Selva,2017,55.62417784957838
+loreto,Loreto,Selva,2018,53.24508130583093
+loreto,Loreto,Selva,2019,52.425630527402205
+loreto,Loreto,Selva,2020,50.66200309890107
+loreto,Loreto,Selva,2021,56.244651634491355
+loreto,Loreto,Selva,2022,52.51180226025835
+loreto,Loreto,Selva,2023,54.70117042020499
+loreto,Loreto,Selva,2024,55.89930224575412
+loreto,Loreto,Selva,2025,53.19830972422713
+madre_de_dios,Madre de Dios,Selva,2015,30.630909631709354
+madre_de_dios,Madre de Dios,Selva,2016,29.120517543227898
+madre_de_dios,Madre de Dios,Selva,2017,22.840103296346612
+madre_de_dios,Madre de Dios,Selva,2018,25.433681240454852
+madre_de_dios,Madre de Dios,Selva,2019,23.215076197710744
+madre_de_dios,Madre de Dios,Selva,2020,24.95339134143992
+madre_de_dios,Madre de Dios,Selva,2021,21.079132535129247
+madre_de_dios,Madre de Dios,Selva,2022,27.24652683764471
+madre_de_dios,Madre de Dios,Selva,2023,29.146743887774484
+madre_de_dios,Madre de Dios,Selva,2024,27.271180022226705
+madre_de_dios,Madre de Dios,Selva,2025,26.18457284634793
+moquegua,Moquegua,Costa,2015,10.585029158832217
+moquegua,Moquegua,Costa,2016,14.142882609584008
+moquegua,Moquegua,Costa,2017,11.634177617048078
+moquegua,Moquegua,Costa,2018,11.37831830091004
+moquegua,Moquegua,Costa,2019,10.96519941879308
+moquegua,Moquegua,Costa,2020,11.875433374560606
+moquegua,Moquegua,Costa,2021,10.188184223046798
+moquegua,Moquegua,Costa,2022,8.872850243092495
+moquegua,Moquegua,Costa,2023,10.998217079887537
+moquegua,Moquegua,Costa,2024,11.243799020498614
+moquegua,Moquegua,Costa,2025,11.784540992611628
+pasco,Pasco,Sierra,2015,44.19217639752027
+pasco,Pasco,Sierra,2016,38.5147831765446
+pasco,Pasco,Sierra,2017,32.6622237586766
+pasco,Pasco,Sierra,2018,33.4127010355504
+pasco,Pasco,Sierra,2019,29.896691812665964
+pasco,Pasco,Sierra,2020,24.878889945096656
+pasco,Pasco,Sierra,2021,21.903778049264766
+pasco,Pasco,Sierra,2022,23.8113131763863
+pasco,Pasco,Sierra,2023,25.97383045045915
+pasco,Pasco,Sierra,2024,24.6472618632752
+pasco,Pasco,Sierra,2025,22.7131999696446
+piura,Piura,Costa,2015,25.53090350721091
+piura,Piura,Costa,2016,26.643838004045193
+piura,Piura,Costa,2017,26.97314831051433
+piura,Piura,Costa,2018,24.57737719180355
+piura,Piura,Costa,2019,22.313125989785103
+piura,Piura,Costa,2020,24.141161429311403
+piura,Piura,Costa,2021,22.606252816663773
+piura,Piura,Costa,2022,21.262519405763346
+piura,Piura,Costa,2023,21.610073131823153
+piura,Piura,Costa,2024,22.048053404829602
+piura,Piura,Costa,2025,22.3062121576939
+puno,Puno,Sierra,2015,30.238143975627914
+puno,Puno,Sierra,2016,26.664152034847454
+puno,Puno,Sierra,2017,24.189345698173252
+puno,Puno,Sierra,2018,19.95581854452639
+puno,Puno,Sierra,2019,20.866659580720448
+puno,Puno,Sierra,2020,21.03158821425009
+puno,Puno,Sierra,2021,20.509168516425213
+puno,Puno,Sierra,2022,18.589287302576214
+puno,Puno,Sierra,2023,19.751655890001288
+puno,Puno,Sierra,2024,20.919171394195498
+puno,Puno,Sierra,2025,18.10124500353136
+san_martin,San Martín,Selva,2015,41.66273170372063
+san_martin,San Martín,Selva,2016,38.282901164658604
+san_martin,San Martín,Selva,2017,34.15692713678165
+san_martin,San Martín,Selva,2018,32.84088928215628
+san_martin,San Martín,Selva,2019,29.05462862299556
+san_martin,San Martín,Selva,2020,34.74894430107292
+san_martin,San Martín,Selva,2021,30.93878226758869
+san_martin,San Martín,Selva,2022,32.752080264197986
+san_martin,San Martín,Selva,2023,30.103188400365166
+san_martin,San Martín,Selva,2024,31.4254664829976
+san_martin,San Martín,Selva,2025,30.214160836590786
+tacna,Tacna,Costa,2015,10.568115514458238
+tacna,Tacna,Costa,2016,9.839045182654871
+tacna,Tacna,Costa,2017,8.780642174986328
+tacna,Tacna,Costa,2018,9.318470813823325
+tacna,Tacna,Costa,2019,7.481578600094438
+tacna,Tacna,Costa,2020,8.996965449195912
+tacna,Tacna,Costa,2021,5.993161964140722
+tacna,Tacna,Costa,2022,7.0148809964791905
+tacna,Tacna,Costa,2023,10.284770197539284
+tacna,Tacna,Costa,2024,9.915656585909833
+tacna,Tacna,Costa,2025,9.921533936464126
+tumbes,Tumbes,Costa,2015,26.847570597403685
+tumbes,Tumbes,Costa,2016,28.567347808534755
+tumbes,Tumbes,Costa,2017,25.5897416847377
+tumbes,Tumbes,Costa,2018,26.238246252614733
+tumbes,Tumbes,Costa,2019,20.73924013979414
+tumbes,Tumbes,Costa,2020,25.670810606056428
+tumbes,Tumbes,Costa,2021,21.18200784447358
+tumbes,Tumbes,Costa,2022,21.54560785517112
+tumbes,Tumbes,Costa,2023,20.263348301895306
+tumbes,Tumbes,Costa,2024,20.190495629692954
+tumbes,Tumbes,Costa,2025,22.583978665160114
+ucayali,Ucayali,Selva,2015,47.39553456600071
+ucayali,Ucayali,Selva,2016,45.191490109898595
+ucayali,Ucayali,Selva,2017,42.29384794833474
+ucayali,Ucayali,Selva,2018,40.55262546561378
+ucayali,Ucayali,Selva,2019,43.44754261988696
+ucayali,Ucayali,Selva,2020,39.39825714874035
+ucayali,Ucayali,Selva,2021,42.896851029032916
+ucayali,Ucayali,Selva,2022,42.85725098930793
+ucayali,Ucayali,Selva,2023,42.96592531803996
+ucayali,Ucayali,Selva,2024,39.31686730355706
+ucayali,Ucayali,Selva,2025,39.41011818680205

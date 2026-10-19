@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* Technical Dashboard Grid Backgrounds */
+.tech-grid-bg {
+  background-color: #0A0A0B;
+  background-image: radial-gradient(#1A1A1D 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.tech-grid-dense {
+  background-color: #0D0D0F;
+  background-image: radial-gradient(#2A2A2E 1px, transparent 0);
+  background-size: 16px 16px;
+}
+
+/* Custom Scrollbar for Technical Density */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A2E;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00FFC2;
+}
+
+/* Leaflet Technical Map Dark Styling */
+.leaflet-container {
+  background-color: #0A0A0B !important;
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+.leaflet-custom-tooltip {
+  background-color: rgba(17, 17, 19, 0.96) !important;
+  border: 1px solid #2A2A2E !important;
+  color: #00FFC2 !important;
+  border-radius: 2px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8) !important;
+  padding: 0.25rem 0.5rem !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 11px !important;
+}
+
+.leaflet-custom-tooltip::before {
+  border-top-color: #111113 !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background-color: #111113 !important;
+  color: #E0E0E0 !important;
+  border-radius: 4px !important;
+  border: 1px solid #2A2A2E !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9) !important;
+}
+
+.leaflet-popup-tip {
+  background-color: #111113 !important;
+}
+

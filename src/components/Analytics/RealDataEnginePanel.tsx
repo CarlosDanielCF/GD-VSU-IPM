@@ -1,0 +1,38 @@
+import React from 'react';
+import { AlertTriangle, CheckCircle2, Code2, Database, ExternalLink, PlayCircle } from 'lucide-react';
+import { Bar, BarChart, CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import type { RealDataset, RealModelResult } from '../../types/realData';
+import { historyFor } from '../../services/realDataEngine';
+import type { DatasetProfile } from '../../types/realData';
+import { DatasetTrainingWorkspace } from './DatasetTrainingWorkspace';
+
+interface Props { dataset: RealDataset | null; model: RealModelResult | null; error: string | null; departmentId: string; onDatasetChange:(data:RealDataset,profile:DatasetProfile)=>void; onReset:()=>void }
+const Explain = ({ how, meaning, limit }: { how:string; meaning:string; limit:string }) => <div className="grid md:grid-cols-3 gap-2 mt-3 text-[11px]">
+  <div className="p-3 border border-[#38BDF8]/30 bg-[#38BDF8]/5 rounded"><b className="text-[#38BDF8]">CÓMO SE OBTUVO</b><p className="mt-1 text-[#B7BDC5]">{how}</p></div>
+  <div className="p-3 border border-[#00FFC2]/30 bg-[#00FFC2]/5 rounded"><b className="text-[#00FFC2]">INTERPRETACIÓN</b><p className="mt-1 text-[#B7BDC5]">{meaning}</p></div>
+  <div className="p-3 border border-[#FFAA00]/30 bg-[#FFAA00]/5 rounded"><b className="text-[#FFAA00]">LÍMITE</b><p className="mt-1 text-[#B7BDC5]">{limit}</p></div>
+</div>;
+
+export const RealDataEnginePanel: React.FC<Props> = ({dataset, model, error, departmentId, onDatasetChange, onReset}) => {
+  if(error) return <div className="p-5 border border-red-500 text-red-300"><AlertTriangle className="inline w-4 h-4 mr-2"/>{error}</div>;
+  if(!dataset || !model) return <div className="p-6 text-[#38BDF8]">Cargando y validando el dataset oficial…</div>;
+  const history=historyFor(dataset,departmentId), current=history.at(-1);
+  const test=model.predictions.filter(r=>r.department_id===departmentId);
+  const chart=history.map(r=>({...r,...(test.find(p=>p.year===r.year)?{predicted:test.find(p=>p.year===r.year)!.predicted}:{})}));
+  const years=dataset.records.map(r=>r.year);
+  const minYear=Math.min(...years), latestYear=Math.max(...years);
+  const latest=dataset.records.filter(r=>r.year===latestYear).sort((a,b)=>b.nbi_percent-a.nbi_percent);
+  return <div className="space-y-5">
+    <DatasetTrainingWorkspace dataset={dataset} model={model} onDatasetChange={onDatasetChange} onReset={onReset}/>
+    <section className="p-4 bg-[#111113] border border-[#00FFC2]/40 rounded-lg">
+      <div className="flex flex-wrap justify-between gap-3"><div><h2 className="font-mono font-bold text-white"><Database className="inline w-4 h-4 mr-2 text-[#00FFC2]"/>DATOS REALES + MOTOR IA AUDITABLE</h2><p className="text-xs text-[#8E9299] mt-1">{dataset.metadata.source}</p></div><div className="flex gap-4"><a href="/data/inei_nbi_training.csv" download className="text-xs text-[#00FFC2]">DESCARGAR DATASET LIMPIO</a><a href={dataset.metadata.url} target="_blank" rel="noreferrer" className="text-xs text-[#38BDF8]">FUENTE INEI <ExternalLink className="inline w-3 h-3"/></a></div></div>
+      <div className="grid grid-cols-2 md:grid-cols-6 gap-2 mt-4">{[['Filas',dataset.records.length],['Territorios',new Set(dataset.records.map(r=>r.department_id)).size],['Periodo',`${minYear}–${latestYear}`],[`NBI ${current?.year ?? latestYear}`,`${current?.nbi_percent.toFixed(2)}%`],['R² prueba',model.r2.toFixed(3)],['RMSE',`${model.rmse.toFixed(2)} pp`]].map(([k,v])=><div key={String(k)} className="p-3 bg-black/25 border border-[#2A2A2E]"><div className="text-[9px] text-[#8E9299]">{k}</div><div className="font-mono text-lg text-white">{v}</div></div>)}</div>
+      <div className="mt-3 flex gap-4 text-[10px] font-mono"><span className="text-[#22c55e]"><CheckCircle2 className="inline w-3 h-3"/> SIN DATOS GENERADOS</span><span className="text-[#22c55e]"><CheckCircle2 className="inline w-3 h-3"/> SIN IMPUTACIÓN</span></div>
+    </section>
+    <section className="p-4 bg-[#111113] border border-[#2A2A2E] rounded"><h3 className="text-sm font-bold">Evolución oficial y prueba temporal</h3><div className="h-80 mt-3"><ResponsiveContainer><LineChart data={chart}><CartesianGrid stroke="#25252a"/><XAxis dataKey="year"/><YAxis/><Tooltip/><Legend/><Line dataKey="nbi_percent" name="NBI observada (%)" stroke="#38BDF8" strokeWidth={2}/><Line dataKey="predicted" name={`Modelo (prueba ≥${model.testMinYear})`} stroke="#00FFC2" strokeWidth={2}/></LineChart></ResponsiveContainer></div><Explain how={`El catálogo activo se entrena hasta ${model.trainMaxYear} y reserva desde ${model.testMinYear} para prueba temporal.`} meaning="La separación entre líneas es el error. R² resume la variación reproducida y RMSE el error típico en puntos porcentuales." limit="NBI no equivale a IPM y una serie departamental no permite inferir causalidad ni focalizar hogares."/></section>
+    <section className="grid lg:grid-cols-2 gap-5"><div className="p-4 bg-[#111113] border border-[#2A2A2E] rounded"><h3 className="text-sm font-bold">Comparación territorial {latestYear}</h3><div className="h-[520px]"><ResponsiveContainer><BarChart data={latest} layout="vertical" margin={{left:70}}><CartesianGrid stroke="#25252a"/><XAxis type="number"/><YAxis dataKey="department" type="category" width={105} tick={{fontSize:9}}/><Tooltip/><Bar dataKey="nbi_percent" name="NBI (%)" fill="#38BDF8"/></BarChart></ResponsiveContainer></div><Explain how={`Lectura de ${latest.length} filas disponibles para ${latestYear}.`} meaning="Una barra mayor indica mayor proporción con al menos una NBI." limit="La cobertura puede ser parcial si el dataset añadido no incluye todos los territorios; NBI es una estimación, no un censo."/></div>
+      <div className="space-y-5"><div className="p-4 bg-[#111113] border border-[#2A2A2E] rounded"><h3 className="text-sm font-bold"><PlayCircle className="inline w-4 h-4 mr-2"/>Dónde se carga y entrena</h3><div className="mt-3 space-y-2 font-mono text-[11px]"><p><span className="text-[#38BDF8]">1 CARGA</span> JSON base + datasets añadidos</p><p><span className="text-[#A78BFA]">2 VALIDACIÓN</span> esquema · rangos · duplicados · procedencia</p><p><span className="text-[#00FFC2]">3 ENTRENA</span> src/services/realDataEngine.ts · años ≤{model.trainMaxYear}</p><p><span className="text-[#FFAA00]">4 PRUEBA</span> años ≥{model.testMinYear} ({model.testRows} observaciones)</p><p><span className="text-white">5 COPILOTO</span> recibe NBI, métricas y predicción del catálogo activo</p></div></div>
+      <div className="p-4 bg-[#111113] border border-[#2A2A2E] rounded"><h3 className="text-sm font-bold">Explicabilidad del modelo</h3><table className="w-full mt-3 text-xs"><tbody>{model.coefficients.map(c=><tr key={c.name} className="border-b border-[#2A2A2E]"><td className="py-2">{c.name}</td><td className="text-right font-mono text-[#00FFC2]">{c.value.toFixed(4)}</td></tr>)}</tbody></table><Explain how="Regresión lineal multiterritorial con NBI rezagada y tendencia anual." meaning="El coeficiente del rezago indica cuánto persiste la NBI de un año al siguiente." limit="Coeficientes predictivos; no representan efectos causales."/></div>
+      <div className="p-4 bg-[#111113] border border-[#2A2A2E] rounded"><h3 className="text-sm font-bold"><Code2 className="inline w-4 h-4 mr-2"/>Auditoría ejecutable</h3><p className="text-xs text-[#B7BDC5] mt-2">El XLSX original permanece intacto en <code>data/raw/INEI_NBI_departamento.xlsx</code>. <code>python scripts/export_real_data.py</code> excluye títulos, total, vacíos y notas; valida departamentos, años, rangos y claves; luego genera <code>data/processed/inei_nbi_training.csv</code> y el JSON usado por el motor.</p></div></div></section>
+  </div>;
+};

@@ -1,0 +1,4 @@
+export interface RealNBIRecord { department_id: string; department: string; region: string; year: number; nbi_percent: number; dataset_id?: string; source_name?: string }
+export interface DatasetProfile { id:string; name:string; format:string; rows:number; validRows:number; rejectedRows:number; duplicateKeys:number; minYear:number; maxYear:number; territories:number; addedAt:string }
+export interface RealDataset { metadata: { source: string; url: string; rows: number; territories: number; years: [number, number]; generated: boolean; imputed: boolean; unit: string }; records: RealNBIRecord[] }
+export interface RealModelResult { r2: number; rmse: number; trainRows: number; testRows: number; trainMaxYear:number; testMinYear:number; coefficients: { name: string; value: number }[]; predictions: Array<RealNBIRecord & { predicted: number; error: number }> }
