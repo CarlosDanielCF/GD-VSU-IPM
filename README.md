@@ -56,6 +56,43 @@ Abre tu navegador en esa dirección para interactuar con la plataforma completa.
 
 ---
 
+## Despliegue demostrativo en Streamlit Community Cloud
+
+La aplicación Streamlit se puede desplegar directamente desde este repositorio
+sin iniciar React ni el servicio Node/Express.
+
+- Repositorio: `CarlosDanielCF/GD-VSU-IPM`
+- Rama: `main`
+- Archivo principal: `streamlit_app.py`
+- Versión de Python recomendada: `3.12`
+- Dependencias: `requirements.txt`
+
+En Streamlit Community Cloud, seleccione **Create app**, indique los valores
+anteriores y pulse **Deploy**. El dataset oficial requerido está versionado en
+`data/raw/INEI_NBI_departamento.xlsx` y se resuelve mediante una ruta relativa
+al repositorio, por lo que no requiere una ruta local de Windows.
+
+La demostración funciona sin secretos y conserva el chatbot local
+determinístico. Para habilitar integraciones opcionales, agregue en **Advanced
+settings → Secrets** únicamente los valores que vaya a utilizar:
+
+```toml
+GEMINI_API_KEY = "clave-real"
+GEMINI_MODEL = "gemini-2.5-flash"
+
+# Langflow debe estar publicado en una URL accesible desde Internet;
+# no utilice localhost en Community Cloud.
+LANGFLOW_URL = "https://langflow.example.com"
+LANGFLOW_FLOW_ID = "id-del-flujo"
+LANGFLOW_API_KEY = "clave-opcional"
+```
+
+No cree ni suba `.streamlit/secrets.toml`: ese archivo está excluido por
+`.gitignore`. Los secretos se introducen exclusivamente en la consola de
+Streamlit Community Cloud.
+
+---
+
 ## 📦 Scripts Disponibles
 
 - `npm run dev`: Inicia el runtime Python/Streamlit (puerto 8501).

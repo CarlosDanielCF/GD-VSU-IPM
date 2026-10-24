@@ -8,5 +8,6 @@ __pycache__/
 *.py[cod]
 .env*
 !.env.example
+.streamlit/secrets.toml
 .runtime-logs/
 public/gemelo-digital-vsu.zip
