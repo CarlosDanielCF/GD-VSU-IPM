@@ -11,7 +11,10 @@ rotulado en Streamlit como no autoritativo: sus agentes sintéticos sirven para
 ensayar mecanismos, nunca se presentan como observaciones reales ni alimentan
 las cifras oficiales del tablero.
 
-> **Runtime principal actual:** arquitectura híbrida sin pérdida funcional. Streamlit + Python + scikit-learn + LangGraph aportan analítica y copiloto; React/Vite conserva íntegramente el sistema GD‑VSU original con mapas, ABM, IoT, stress testing, reportes y gobernanza. No requiere FastAPI.
+> **Arquitectura actual:** FastAPI publica la API científica y de datos;
+> Streamlit + Python + scikit-learn ejecutan la analítica estadística y ML;
+> React/Vite aporta la visualización 2D/3D y conserva el ABM experimental en
+> TypeScript; Node/Express se mantiene exclusivamente para el copiloto IA.
 
 Plataforma analítica avanzada de gemelo digital urbano para la simulación, monitoreo satelital e IoT, y evaluación multidimensional de vulnerabilidad social y resiliencia territorial (basada en la metodología Alkire-Foster y micro-simulación basada en agentes).
 
@@ -53,6 +56,30 @@ python -m streamlit run streamlit_app.py
 La aplicación inicia en **`http://localhost:8501`**. En Windows también puede ejecutar `run_streamlit.ps1`.
 
 Abre tu navegador en esa dirección para interactuar con la plataforma completa.
+
+### Iniciar la API científica FastAPI
+
+Desde la raíz del repositorio:
+
+```bash
+python -m uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
+```
+
+- API: `http://localhost:8000`
+- Swagger UI: `http://localhost:8000/docs`
+- OpenAPI: `http://localhost:8000/openapi.json`
+
+Los orígenes autorizados para React se configuran con
+`CORS_ALLOWED_ORIGINS`, como una lista de URL separadas por comas. FastAPI
+reutiliza el cargador validado de `python_app/data_engine.py`; no mantiene una
+copia paralela del dataset ni ejecuta todavía el ABM.
+
+Para ejecutar la suite de pruebas en un entorno nuevo:
+
+```bash
+python -m pip install -r requirements-dev.txt
+python -m pytest -q
+```
 
 ---
 
@@ -100,6 +127,8 @@ Streamlit Community Cloud.
 - `npm run dev:web`: Inicia únicamente la interfaz Vite.
 - `npm run dev:ai`: Inicia la API del Copiloto Territorial con recarga automática.
 - `npm run start:ai`: Inicia únicamente la API del Copiloto Territorial.
+- `npm run dev:api`: Inicia FastAPI con recarga automática en el puerto 8000.
+- `npm run start:api`: Inicia FastAPI sin recarga en el puerto 8000.
 - `npm run build`: Compila la aplicación optimizada para producción en la carpeta `dist/`.
 - `npm run preview`: Previsualiza localmente el build de producción.
 - `npm run lint`: Ejecuta el chequeo estricto de tipos con TypeScript (`tsc --noEmit`).
@@ -150,7 +179,34 @@ Streamlit Community Cloud.
    - Traza visible de cada nodo y del motor realmente utilizado en cada respuesta.
    - Inferencia mediante el modelo campeón del Motor ML y, cuando el usuario entrena una sesión, mediante sus pesos, sesgo, RMSE e intervalos de confianza reales.
 
-> **Aclaración de arquitectura:** la aplicación ejecutable es React + TypeScript + Vite. No usa Streamlit ni FastAPI. Los fragmentos Python/FastAPI visibles en el explorador de arquitectura son ejemplos descargables, no el runtime de la aplicación. El servicio Express solo protege credenciales y orquesta LangGraph; el análisis numérico proviene de Alkire-Foster, ABM y el Motor ML entrenado de GD-VSU.
+> **Aclaración de arquitectura:** FastAPI es una API ejecutable para datos y
+> metadatos científicos, pero React aún no la consume en esta primera etapa.
+> Streamlit ejecuta el análisis estadístico y ML sobre datos oficiales. React
+> ejecuta en el navegador la visualización y el ABM experimental en TypeScript.
+> Node/Express protege credenciales y orquesta el copiloto LangGraph. Los
+> fragmentos adicionales de FastAPI visibles en el explorador de arquitectura
+> siguen siendo ejemplos y no deben confundirse con los endpoints reales de
+> `backend/main.py`.
+
+## Arquitectura ejecutable
+
+| Componente | Responsabilidad actual | Inicio |
+|---|---|---|
+| FastAPI | API científica, catálogo INEI, indicadores y metadatos de modelos | `npm run dev:api` |
+| Streamlit/Python | EDA, pruebas estadísticas, validación 10-fold y chatbot del motor | `python -m streamlit run streamlit_app.py` |
+| React/TypeScript | Visualización SIG 2D, gemelo 3D y ABM experimental en navegador | `npm run dev:web` |
+| Node/Express | API exclusiva del copiloto IA con LangGraph, LangChain y Langflow | `npm run dev:ai` |
+
+Endpoints iniciales de FastAPI:
+
+- `GET /api/health`
+- `GET /api/dataset/info`
+- `GET /api/dataset/records?offset=0&limit=100`
+- `GET /api/indicators`
+- `GET /api/model/info`
+
+El ABM continúa en `src/services/abmSimulator.ts`, utiliza agentes sintéticos
+para explorar mecanismos y **no está implementado en Python** en esta etapa.
 
 ---
 
