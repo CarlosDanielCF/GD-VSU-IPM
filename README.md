@@ -192,8 +192,8 @@ Streamlit Community Cloud.
 
 | Componente | Responsabilidad actual | Inicio |
 |---|---|---|
-| FastAPI | API científica, catálogo INEI, indicadores y metadatos de modelos | `npm run dev:api` |
-| Streamlit/Python | EDA, pruebas estadísticas, validación 10-fold y chatbot del motor | `python -m streamlit run streamlit_app.py` |
+| FastAPI | Backend/API científica, datos y simulación demostrativa | `npm run dev:api` |
+| Streamlit/Python | Análisis estadístico, ML y simulación demostrativa sintética | `python -m streamlit run streamlit_app.py` |
 | React/TypeScript | Visualización SIG 2D, gemelo 3D y ABM experimental en navegador | `npm run dev:web` |
 | Node/Express | API exclusiva del copiloto IA con LangGraph, LangChain y Langflow | `npm run dev:ai` |
 
@@ -204,9 +204,13 @@ Endpoints iniciales de FastAPI:
 - `GET /api/dataset/records?offset=0&limit=100`
 - `GET /api/indicators`
 - `GET /api/model/info`
+- `GET /api/simulation/info`
+- `POST /api/simulation/run`
 
 El ABM continúa en `src/services/abmSimulator.ts`, utiliza agentes sintéticos
 para explorar mecanismos y **no está implementado en Python** en esta etapa.
+La simulación Python añadida es una demostración mínima, reproducible y
+experimental; no constituye una migración ni sustitución de ese ABM.
 
 ---
 

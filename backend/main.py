@@ -19,9 +19,10 @@ from pydantic import BaseModel, ConfigDict, Field, HttpUrl
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from python_app.data_engine import SOURCE_LABEL, SOURCE_URL, national_dataset
+from python_app.demo_simulation import SCENARIOS, Scenario, run_demo_simulation
 
 
-API_VERSION = "0.1.0"
+API_VERSION = "0.2.0"
 SYSTEM_NAME = "GD-VSU/IPM"
 
 
@@ -119,6 +120,42 @@ class ModelInfoResponse(ApiModel):
     separation_note: str
 
 
+class SimulationInfoResponse(ApiModel):
+    name: str
+    runtime: str
+    scenarios: list[Scenario]
+    reproducible: Literal[True] = True
+    synthetic_agents: Literal[True] = True
+    experimental: Literal[True] = True
+    note: str
+
+
+class SimulationRequest(ApiModel):
+    scenario: Scenario = "base"
+    agents: int = Field(default=1000, ge=100, le=100_000)
+    seed: int = Field(default=42, ge=0, le=4_294_967_295)
+
+
+class SimulationChartItem(ApiModel):
+    indicator: str
+    percent: float = Field(ge=0, le=100)
+
+
+class SimulationRunResponse(ApiModel):
+    scenario: Scenario
+    seed: int
+    agents: int
+    synthetic_agents: Literal[True]
+    experimental: Literal[True]
+    baseline_vulnerability_rate: float = Field(ge=0, le=100)
+    final_vulnerability_rate: float = Field(ge=0, le=100)
+    unemployment_rate: float = Field(ge=0, le=100)
+    service_deprivation_rate: float = Field(ge=0, le=100)
+    vulnerability_change_pp: float
+    chart: list[SimulationChartItem]
+    note: str
+
+
 class ErrorResponse(ApiModel):
     status_code: int
     error: str
@@ -141,7 +178,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials="*" not in origins,
-    allow_methods=["GET"],
+    allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
 )
 
@@ -328,3 +365,32 @@ def model_info() -> ModelInfoResponse:
             "el ABM permanece experimental en React/TypeScript y no se presenta como Python."
         ),
     )
+
+
+@app.get(
+    "/api/simulation/info",
+    response_model=SimulationInfoResponse,
+    tags=["Simulation"],
+    summary="Describe la simulación demostrativa Python",
+)
+def simulation_info() -> SimulationInfoResponse:
+    return SimulationInfoResponse(
+        name="Simulación demostrativa de vulnerabilidad",
+        runtime="Python / NumPy",
+        scenarios=list(SCENARIOS),
+        note=(
+            "Experimento reproducible con agentes sintéticos. No utiliza hogares reales "
+            "y no reemplaza el ABM experimental de React/TypeScript."
+        ),
+    )
+
+
+@app.post(
+    "/api/simulation/run",
+    response_model=SimulationRunResponse,
+    tags=["Simulation"],
+    summary="Ejecuta una simulación sintética reproducible",
+)
+def simulation_run(request: SimulationRequest) -> SimulationRunResponse:
+    result = run_demo_simulation(request.scenario, request.agents, request.seed)
+    return SimulationRunResponse.model_validate(result)

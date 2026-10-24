@@ -13,7 +13,7 @@ def test_health() -> None:
         "status": "ok",
         "system": "GD-VSU/IPM",
         "service": "Scientific Data API",
-        "version": "0.1.0",
+        "version": "0.2.0",
     }
 
 
@@ -65,3 +65,22 @@ def test_openapi_and_invalid_route() -> None:
     response = client.get("/api/does-not-exist")
     assert response.status_code == 404
     assert response.json()["status_code"] == 404
+
+
+def test_simulation_info_is_explicitly_experimental() -> None:
+    response = client.get("/api/simulation/info")
+    assert response.status_code == 200
+    data = response.json()
+    assert data["scenarios"] == ["base", "desempleo", "inflacion", "inundacion"]
+    assert data["synthetic_agents"] is True
+    assert data["experimental"] is True
+
+
+def test_simulation_run_is_reproducible() -> None:
+    payload = {"scenario": "inundacion", "agents": 500, "seed": 123}
+    first = client.post("/api/simulation/run", json=payload)
+    second = client.post("/api/simulation/run", json=payload)
+    assert first.status_code == 200
+    assert first.json() == second.json()
+    assert first.json()["agents"] == 500
+    assert first.json()["synthetic_agents"] is True

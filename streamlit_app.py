@@ -14,6 +14,7 @@ from python_app.ai_lab import (
     validate_training_frame,
 )
 from python_app.data_engine import NBI_SOURCE, SOURCE_LABEL, SOURCE_URL, national_dataset
+from python_app.demo_simulation import run_demo_simulation
 
 load_dotenv()
 st.set_page_config(page_title="Motor IA · Vulnerabilidad Socioeconómica", page_icon="◈", layout="wide")
@@ -96,7 +97,7 @@ with st.sidebar:
 st.markdown(f"""<section class="hero"><div class="hero-kicker">LABORATORIO AUTÓNOMO · PYTHON / STREAMLIT</div>
 <h1>Motor IA de Vulnerabilidad Socioeconómica</h1>
 <p>Analítica reproducible, pruebas estadísticas y comparación de modelos con validación cruzada. Dataset activo: <b>{profile['source']}</b> · ejecución {datetime.now():%Y-%m-%d %H:%M}.</p></section>""", unsafe_allow_html=True)
-st.markdown("<div class='section-note'><b>Separación funcional:</b> esta aplicación trabaja únicamente con datos tabulares. No recibe estados, agentes, escenarios ni telemetría del Gemelo Digital.</div>", unsafe_allow_html=True)
+st.markdown("<div class='section-note'><b>Separación funcional:</b> el análisis usa datos tabulares oficiales. La pestaña Simulación es un experimento independiente con agentes sintéticos y no recibe estados ni telemetría del Gemelo Digital React.</div>", unsafe_allow_html=True)
 
 metrics = st.columns(6)
 metrics[0].metric("Filas", summary["rows"])
@@ -106,9 +107,9 @@ metrics[3].metric("Faltantes", summary["missing"])
 metrics[4].metric("Modelo campeón", champion["Modelo"])
 metrics[5].metric("RMSE 10-fold", f"{champion['RMSE medio']:.3f}")
 
-dataset_tab, eda_tab, stats_tab, training_tab, flow_tab, chat_tab = st.tabs([
+dataset_tab, eda_tab, stats_tab, training_tab, simulation_tab, flow_tab, chat_tab = st.tabs([
     "Datasets", "EDA", "Pruebas estadísticas", "Entrenamiento 10-fold",
-    "LangGraph · Langflow", "Chatbot",
+    "Simulación", "LangGraph · Langflow", "Chatbot",
 ])
 
 with dataset_tab:
@@ -247,6 +248,33 @@ with training_tab:
     explain("entrenamiento", "El campeón es el modelo con menor RMSE promedio en los diez conjuntos de validación.",
             "KFold de 10 particiones, mezcla reproducible con semilla 42 y preprocesamiento dentro de cada fold para evitar fuga de información.",
             "El desempeño histórico no garantiza precisión futura; la validación debe repetirse cuando cambien fuente o definición.")
+
+with simulation_tab:
+    st.subheader("Simulación demostrativa en Python")
+    st.warning("Experimento con agentes sintéticos. No representa hogares reales ni reemplaza el ABM TypeScript de React.")
+    sim_col1, sim_col2, sim_col3 = st.columns(3)
+    scenario = sim_col1.selectbox("Escenario", ["base", "desempleo", "inflacion", "inundacion"])
+    agents = sim_col2.number_input("Número de agentes", min_value=100, max_value=100_000, value=1_000, step=100)
+    seed = sim_col3.number_input("Semilla", min_value=0, max_value=4_294_967_295, value=42, step=1)
+    if st.button("Ejecutar simulación", type="primary"):
+        st.session_state.demo_simulation = run_demo_simulation(scenario, int(agents), int(seed))
+    simulation = st.session_state.get("demo_simulation")
+    if simulation:
+        sim_metrics = st.columns(4)
+        sim_metrics[0].metric("Vulnerabilidad inicial", f"{simulation['baseline_vulnerability_rate']:.2f}%")
+        sim_metrics[1].metric("Vulnerabilidad final", f"{simulation['final_vulnerability_rate']:.2f}%",
+                              f"{simulation['vulnerability_change_pp']:+.2f} pp")
+        sim_metrics[2].metric("Desempleo", f"{simulation['unemployment_rate']:.2f}%")
+        sim_metrics[3].metric("Carencia de servicios", f"{simulation['service_deprivation_rate']:.2f}%")
+        simulation_chart = px.bar(pd.DataFrame(simulation["chart"]), x="indicator", y="percent",
+                                  color="indicator", text_auto=".2f",
+                                  labels={"indicator": "Indicador", "percent": "Porcentaje"})
+        style_figure(simulation_chart, f"Escenario: {simulation['scenario']}",
+                     f"{simulation['agents']:,} agentes sintéticos · semilla {simulation['seed']}", 390)
+        simulation_chart.update_layout(showlegend=False)
+        simulation_chart.update_yaxes(range=[0, 100])
+        st.plotly_chart(simulation_chart, width="stretch")
+        st.caption(simulation["note"])
 
 with flow_tab:
     st.subheader("Orquestación independiente")
