@@ -135,6 +135,29 @@ Streamlit Community Cloud.
 
 ---
 
+## Microdatos ENAHO observados
+
+La pestaña **Datasets** de Streamlit incluye una canalización separada para
+construir una tabla longitudinal hogar-periodo. Por cada año exige los módulos
+oficiales `100`, `200`, `300`, `400`, `500` y `Sumaria`, y requiere al menos dos
+años completos. La unión usa `CONGLOME + VIVIENDA + HOGAR`; la salida sustituye
+esas claves por un identificador pseudonimizado y marca cada fila como
+`observado_enaho` / `es_sintetico=false`.
+
+La canalización no imputa módulos, no crea hogares y no mezcla la tabla ENAHO
+con predicciones ni con las simulaciones experimentales. En el repositorio solo
+se encuentra actualmente `data/raw/Enaho01-2020-100.csv`; por ello aún se deben
+proporcionar los demás módulos y un segundo año antes de generar el panel.
+
+## Descarga de las vistas del gemelo
+
+En el encabezado del visor React aparece **Descargar imagen 2D/3D** según el modo
+activo. La acción exporta un PNG a 2.5× de resolución con las capas, controles,
+selección, año y estado que se ven en pantalla. Las teselas 2D se solicitan con
+CORS y el renderizador WebGL 3D conserva el fotograma necesario para la captura.
+
+---
+
 ## 🏙️ Módulos y Capacidades del Sistema
 
 1. **Visor Territorial 3D & 2D (Dashboard Principal):**

@@ -1,7 +1,7 @@
 import type { RealDataset, RealModelResult, RealNBIRecord } from '../types/realData';
 
 export async function loadRealDataset(): Promise<RealDataset> {
-  const response = await fetch('/data/inei_nbi_2015_2025.json', { cache: 'no-store' });
+  const response = await fetch(`${import.meta.env.BASE_URL}data/inei_nbi_2015_2025.json`, { cache: 'no-store' });
   if (!response.ok) throw new Error(`No se pudo cargar INEI (${response.status})`);
   const data = await response.json() as RealDataset;
   if (data.metadata.generated || data.metadata.imputed || data.records.length !== 286) throw new Error('Integridad del dataset oficial no válida');

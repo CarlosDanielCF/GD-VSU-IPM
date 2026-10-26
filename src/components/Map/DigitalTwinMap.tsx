@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { NeighborhoodCell, BlockCell, UrbanPOI, ShockScenario, PolicyScenario } from '../../types';
 import { DigitalTwin3DViewer } from './DigitalTwin3DViewer';
 import L from 'leaflet';
+import { toPng } from 'html-to-image';
 import { 
   Layers, 
   MapPin, 
@@ -18,7 +19,9 @@ import {
   ZoomOut,
   Box,
   Compass,
-  HelpCircle
+  HelpCircle,
+  Download,
+  LoaderCircle
 } from 'lucide-react';
 
 interface DigitalTwinMapProps {
@@ -48,6 +51,7 @@ export const DigitalTwinMap: React.FC<DigitalTwinMapProps> = ({
   const [viewDimension, setViewDimension] = useState<'3d' | '2d'>('3d');
 
   const mapContainerRef = useRef<HTMLDivElement>(null);
+  const captureRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<L.Map | null>(null);
   const geojsonLayerRef = useRef<L.GeoJSON | null>(null);
   const poiLayerRef = useRef<L.LayerGroup | null>(null);
@@ -60,6 +64,41 @@ export const DigitalTwinMap: React.FC<DigitalTwinMapProps> = ({
   const [showShocks, setShowShocks] = useState<boolean>(true);
   const [showPolicies, setShowPolicies] = useState<boolean>(true);
   const [showBlocksDetail, setShowBlocksDetail] = useState<boolean>(false);
+  const [isExporting, setIsExporting] = useState(false);
+  const [exportError, setExportError] = useState<string | null>(null);
+
+  const downloadCurrentView = async () => {
+    if (!captureRef.current || isExporting) return;
+    setIsExporting(true);
+    setExportError(null);
+    try {
+      await document.fonts.ready;
+      if (viewDimension === '2d') {
+        mapInstanceRef.current?.invalidateSize();
+        await new Promise(resolve => window.setTimeout(resolve, 350));
+      } else {
+        await new Promise<void>(resolve => window.requestAnimationFrame(() => window.requestAnimationFrame(() => resolve())));
+      }
+      const dataUrl = await toPng(captureRef.current, {
+        backgroundColor: '#0A0A0B',
+        cacheBust: true,
+        pixelRatio: 2.5,
+        filter: node => !(node instanceof HTMLElement && node.dataset.captureExclude === 'true'),
+      });
+      const context = selectedNeighborhood?.nombre || 'territorio';
+      const safeContext = context.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-zA-Z0-9]+/g, '-').replace(/^-|-$/g, '').toLowerCase();
+      const link = document.createElement('a');
+      link.download = `gd-vsu-${viewDimension}-${safeContext || 'territorio'}-${currentYear}.png`;
+      link.href = dataUrl;
+      link.click();
+    } catch (error) {
+      console.error('No se pudo exportar la vista del gemelo digital:', error);
+      setExportError('No se pudo generar la imagen. Verifique que las capas del mapa hayan terminado de cargar.');
+    } finally {
+      setIsExporting(false);
+    }
+  };
 
   // Initialize 2D Leaflet Map when in 2D mode
   useEffect(() => {
@@ -83,7 +122,8 @@ export const DigitalTwinMap: React.FC<DigitalTwinMapProps> = ({
       L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
         attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; OpenStreetMap',
         subdomains: 'abcd',
-        maxZoom: 19
+        maxZoom: 19,
+        crossOrigin: true
       }).addTo(map);
 
       mapInstanceRef.current = map;
@@ -324,7 +364,7 @@ export const DigitalTwinMap: React.FC<DigitalTwinMapProps> = ({
   }, [selectedNeighborhood]);
 
   return (
-    <div className="space-y-2">
+    <div ref={captureRef} className="space-y-2 bg-[#0A0A0B] p-1">
       {/* Top Dimension Switcher Header */}
       <div className="flex flex-wrap items-center justify-between gap-2 p-2.5 bg-[#0F0F11] border border-[#2A2A2E] rounded-sm font-mono text-xs">
         <div className="flex items-center space-x-2">
@@ -356,6 +396,16 @@ export const DigitalTwinMap: React.FC<DigitalTwinMapProps> = ({
         </div>
 
         <div className="flex items-center space-x-2">
+          <button
+            data-capture-exclude="true"
+            onClick={downloadCurrentView}
+            disabled={isExporting}
+            className="flex items-center space-x-1.5 px-2.5 py-1 rounded-sm text-[10px] font-bold uppercase bg-[#141416] hover:bg-[#1A1A1D] disabled:opacity-60 text-white border border-[#38BDF8]/60 transition-all cursor-pointer"
+            title={`Descargar la vista ${viewDimension.toUpperCase()} actual en PNG de alta resolución`}
+          >
+            {isExporting ? <LoaderCircle className="w-3.5 h-3.5 animate-spin text-[#38BDF8]" /> : <Download className="w-3.5 h-3.5 text-[#38BDF8]" />}
+            <span>{isExporting ? 'Generando…' : `Descargar imagen ${viewDimension.toUpperCase()}`}</span>
+          </button>
           {onOpenGuide && (
             <button
               onClick={onOpenGuide}
@@ -372,6 +422,12 @@ export const DigitalTwinMap: React.FC<DigitalTwinMapProps> = ({
           </div>
         </div>
       </div>
+
+      {exportError && (
+        <div data-capture-exclude="true" role="alert" className="px-3 py-2 text-xs font-mono text-[#FF8A8A] bg-[#211114] border border-[#FF4D4D]/50 rounded-sm">
+          {exportError}
+        </div>
+      )}
 
       {/* 3D WebGL Digital Twin Simulation View */}
       {viewDimension === '3d' ? (

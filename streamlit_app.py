@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from datetime import datetime
 import os
+from pathlib import Path
 
 import pandas as pd
 import plotly.express as px
@@ -15,6 +16,10 @@ from python_app.ai_lab import (
 )
 from python_app.data_engine import NBI_SOURCE, SOURCE_LABEL, SOURCE_URL, national_dataset
 from python_app.demo_simulation import run_demo_simulation
+from python_app.enaho_panel import (
+    EnahoValidationError, MODULE_LABELS, REQUIRED_MODULES,
+    build_household_period_table, inspect_enaho_files, repository_enaho_files,
+)
 
 load_dotenv()
 st.set_page_config(page_title="Motor IA · Vulnerabilidad Socioeconómica", page_icon="◈", layout="wide")
@@ -114,6 +119,61 @@ dataset_tab, eda_tab, stats_tab, training_tab, simulation_tab, flow_tab, chat_ta
 
 with dataset_tab:
     st.subheader("Carga, validación y catálogo completo")
+    st.markdown("### ENAHO real · tabla longitudinal hogar-periodo")
+    st.info(
+        "Esta canalización es independiente del dataset agregado usado por el entrenamiento actual. "
+        "Solo acepta microdatos ENAHO observados, exige dos o más años completos y nunca rellena "
+        "módulos faltantes con hogares sintéticos."
+    )
+    repository_files = repository_enaho_files(Path(__file__).resolve().parent / "data" / "raw")
+    if repository_files:
+        with st.expander("Archivos ENAHO detectados actualmente en data/raw"):
+            st.dataframe(inspect_enaho_files(repository_files), hide_index=True, width="stretch")
+            st.warning(
+                "El repositorio todavía no contiene dos años completos de los seis módulos requeridos; "
+                "el archivo 100 de 2020, por sí solo, no permite construir un panel hogar-periodo."
+            )
+    enaho_uploads = st.file_uploader(
+        "Subir módulos oficiales ENAHO (dos o más años)",
+        type=["csv", "tsv", "xls", "xlsx"], accept_multiple_files=True, key="enaho_real_modules",
+        help="Por cada año: módulos 100, 200, 300, 400, 500 y Sumaria, conservando el año y módulo en el nombre.",
+    )
+    with st.expander("Archivos exigidos y reglas de integración"):
+        for module in REQUIRED_MODULES:
+            st.markdown(f"- **{module}** — {MODULE_LABELS[module]}")
+        st.caption(
+            "Vinculación longitudinal: claves oficiales CONGLOME + VIVIENDA + HOGAR. "
+            "La descarga reemplaza esa clave por un identificador SHA-256 pseudonimizado. "
+            "Predicciones y simulaciones no se mezclan con esta tabla observada."
+        )
+    if st.button("Validar módulos y construir tabla hogar-periodo", type="primary", disabled=not enaho_uploads):
+        try:
+            panel, panel_profile = build_household_period_table(enaho_uploads)
+            st.session_state.enaho_panel = panel
+            st.session_state.enaho_panel_profile = panel_profile
+            st.success("Tabla observada construida y validada; no se generaron ni imputaron hogares.")
+        except EnahoValidationError as exc:
+            st.session_state.pop("enaho_panel", None)
+            st.session_state.pop("enaho_panel_profile", None)
+            st.error(str(exc))
+    if "enaho_panel" in st.session_state:
+        enaho_panel = st.session_state.enaho_panel
+        enaho_profile = st.session_state.enaho_panel_profile
+        enaho_metrics = st.columns(4)
+        enaho_metrics[0].metric("Hogar-periodos", enaho_profile["rows"])
+        enaho_metrics[1].metric("Hogares observados", enaho_profile["households"])
+        enaho_metrics[2].metric("Años", len(enaho_profile["years"]))
+        enaho_metrics[3].metric("Hogares longitudinales", enaho_profile["longitudinal_households"])
+        st.dataframe(enaho_panel, hide_index=True, width="stretch", height=360)
+        st.download_button(
+            "Descargar tabla ENAHO hogar-periodo observada",
+            enaho_panel.to_csv(index=False).encode("utf-8-sig"),
+            file_name="enaho_hogar_periodo_observado.csv", mime="text/csv",
+        )
+        with st.expander("Trazabilidad de archivos utilizados"):
+            st.dataframe(pd.DataFrame(enaho_profile["audit"]), hide_index=True, width="stretch")
+    st.divider()
+    st.markdown("### Dataset agregado del motor de entrenamiento")
     left, right = st.columns([2, 1])
     with left:
         uploaded = st.file_uploader("Subir dataset CSV o Excel", type=["csv", "tsv", "xls", "xlsx"],
